@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Release Windows" />
+	<File name="..\combat.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="6221" topLine="258" />
+	</File>
+	<File name="..\game.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="108356" topLine="4080" />
+	</File>
+	<File name="..\game.h" open="1" top="0" tabpos="7">
+		<Cursor position="17497" topLine="431" />
+	</File>
+	<File name="..\ioplayer.cpp" open="1" top="0" tabpos="8">
+		<Cursor position="16409" topLine="463" />
+	</File>
+	<File name="..\luascript.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="57457" topLine="1820" />
+	</File>
+	<File name="..\md5.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="5388" topLine="94" />
+	</File>
+	<File name="..\player.cpp" open="1" top="0" tabpos="10">
+		<Cursor position="87340" topLine="3696" />
+	</File>
+	<File name="..\protocol.h" open="1" top="0" tabpos="3">
+		<Cursor position="1305" topLine="13" />
+	</File>
+	<File name="..\protocolgame.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="65154" topLine="2591" />
+	</File>
+	<File name="..\spells.cpp" open="1" top="1" tabpos="11">
+		<Cursor position="19184" topLine="794" />
+	</File>
+	<File name="..\tasks.h" open="1" top="0" tabpos="1">
+		<Cursor position="783" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

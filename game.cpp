@@ -4457,7 +4457,7 @@ void Game::loadPlayersRecord()
 
 bool Game::broadcastMessage(const std::string& text, MessageClasses type)
 {
-	if(type >= MSG_CLASS_FIRST && type <= MSG_CLASS_LAST)
+	if(type >= MSG_EVENT_DEFAULT && type <= MSG_CLASS_LAST)
 	{
 		std::cout << "> Broadcasted message: \"" << text << "\"." << std::endl;
 		for(AutoList<Player>::listiterator it = Player::listPlayer.list.begin(); it != Player::listPlayer.list.end(); ++it)

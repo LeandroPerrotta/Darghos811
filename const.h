@@ -160,7 +160,7 @@ enum SpeakClasses {
 };
 
 enum MessageClasses {
-    MSG_CLASS_FIRST			= 0x01,
+    MSG_CLASS_FIRST			    = 0x01,
     MSG_STATUS_CONSOLE_YELLOW	= MSG_CLASS_FIRST, /*Yellow message in the console*/
 	MSG_STATUS_CONSOLE_RED		= 0x11, //Red message in the console
 	MSG_STATUS_CONSOLE_ORANGE	= 0x13, //Orange message in the console

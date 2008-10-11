@@ -1,0 +1,14 @@
+<raid>
+<announce delay="0" type="event" message="Minotaurs and a Minotaur Mage are atacking Rook-Town!"/>
+
+<areaspawn delay="1000" centerx="1864" centery="2481" centerz="7" radius="12">
+<monster name="Minotaur" minamount="3" maxamount="7"/>
+</areaspawn>
+
+<areaspawn delay="1000" centerx="1865" centery="2482" centerz="7" radius="12">
+<monster name="Minotaur Mage" minamount="1" maxamount="5"/>
+</areaspawn>
+
+
+
+</raid>

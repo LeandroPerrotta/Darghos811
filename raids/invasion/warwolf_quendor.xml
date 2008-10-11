@@ -1,0 +1,20 @@
+<raid>
+<announce delay="0" type="event" message="Many aggressive beasts are roaming east of Quendor! Take care!"/>
+
+<areaspawn delay="20000" centerx="2094" centery="1881" centerz="7" radius="12">
+<monster name="war wolf" minamount="30" maxamount="50"/>
+</areaspawn>
+
+<areaspawn delay="20000" centerx="2079" centery="1874" centerz="7" radius="10">
+<monster name="war wolf" minamount="20" maxamount="20"/>
+</areaspawn>
+
+<areaspawn delay="20000" centerx="2062" centery="1869" centerz="7" radius="15">
+<monster name="war wolf" minamount="25" maxamount="50"/>
+</areaspawn>
+
+<areaspawn delay="30000" centerx="2051" centery="1867" centerz="7" radius="5">
+<monster name="war wolf" minamount="15" maxamount="50"/>
+</areaspawn>
+
+</raid>

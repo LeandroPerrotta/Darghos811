@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<commands>
+
+	<!-- GOD -->
+	<command cmd="/i" group="5" acctype="5" />
+	<command cmd="/n" group="5" acctype="5" />	
+	<command cmd="/a" group="5" acctype="5" />	
+	<command cmd="/addskill" group="5" acctype="5" />	
+	<command cmd="/summon" group="5" acctype="5" />	
+	<command cmd="/m" group="5" acctype="5" />
+	<command cmd="/openserver" group="6" acctype="5" />
+	<command cmd="/closeserver" group="6" acctype="5" />		
+	<command cmd="/clean" group="6" acctype="5" />
+	<command cmd="/c" group="5" acctype="5" />	
+	<command cmd="/r" group="5" acctype="5" />	
+	<!-- <command cmd="/ghost" group="6" acctype="5"/> -->
+		
+	<!-- CM -->
+	<command cmd="/owner" group="4" acctype="4" />
+	<command cmd="/goto" group="4" acctype="4" />	
+	<command cmd="/up" group="4" acctype="4" />
+	<command cmd="/down" group="4" acctype="4" />
+	<command cmd="/newtype" group="4" acctype="4" />	
+	<command cmd="/kick" group="4" acctype="4" />
+	<command cmd="/reload" group="4" acctype="4" />
+	<command cmd="/raid" group="4" acctype="4" />
+	<command cmd="/s" group="4" acctype="4" />
+	
+	<!-- GM -->
+	
+	<command cmd="/b" group="3" acctype="4" />
+	<command cmd="/q" group="3" acctype="4" />
+	<command cmd="/info" group="3" acctype="4" />
+	<command cmd="/gethouse" group="3" acctype="4" />
+	<command cmd="/unban" group="3" acctype="4" />		
+	<command cmd="/pos" group="3" acctype="4" />
+	
+	<!--Senators-->
+	<command cmd="/t" group="2" acctype="3" />	
+	<command cmd="/B" group="2" acctype="3" />
+	<command cmd="/town" group="2" acctype="3" />
+
+	<command cmd="!createguild" group="2" acctype="5" />
+	<command cmd="!joinguild" group="0" acctype="0" />	
+	<command cmd="!online" group="2" acctype="5" />
+	<command cmd="!buyhouse" group="0" acctype="0" />
+	<command cmd="!sellhouse" group="0" acctype="0" />
+	<command cmd="!serverinfo" group="0" acctype="6" />
+	<command cmd="!kills" group="0" acctype="0" />
+</commands>

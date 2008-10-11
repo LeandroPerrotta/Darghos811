@@ -1,0 +1,15 @@
+<npc name="E'breus" script="data/npc/scripts/aracura_djinn_magic2.lua" autowalk="25" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="80" corpse="2212"/>
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. You want to buy or sell magician items?" />
+		<parameter key="message_needmoremoney" value="You do not have enough money." />
+		<parameter key="message_decline" value="Is |TOTALCOST| gold coins too much for you? Get out of here!" />
+		
+		<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="job;name;offer" />
+		<parameter key="keyword_reply1" value="I buy and sell magic items." />
+		<parameter key="keyword_reply2" value="My name is E'breus. Why do you ask?" />
+		<parameter key="keyword_reply3" value="I sell rings (energy, life, might, ring of healing and time), amulets (dragon necklace, protection, silver, strange talisman)." />	
+	</parameters>
+</npc>

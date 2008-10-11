@@ -1,0 +1,15 @@
+<npc name="Tales" script="data/npc/scripts/global_postman.lua" autowalk="25" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="128" body="116" feet="114" head="41" legs="0" corpse="2212"/>
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I sell parcel and letters!" />
+		<parameter key="message_needmoremoney" value="You do not have enough money." />
+		<parameter key="message_decline" value="Is |TOTALCOST| gold coins too much for you? Get out of here!" />
+		
+		<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="job;name;offer" />
+		<parameter key="keyword_reply1" value="I am the seller of writing objects." />
+		<parameter key="keyword_reply2" value="My name is Tales. Why do you ask?" />
+		<parameter key="keyword_reply3" value="I offer parcel and letter." />			
+	</parameters>
+</npc>

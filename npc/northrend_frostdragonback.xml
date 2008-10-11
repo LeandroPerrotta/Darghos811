@@ -1,0 +1,6 @@
+<npc name="Rizon" script="data/npc/scripts/northrend_travelfb.lua" autowalk="25" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="251" body="77" feet="114" head="114" legs="57" addons="2" corpse="2212"/>
+	<parameters>
+	</parameters>
+</npc>

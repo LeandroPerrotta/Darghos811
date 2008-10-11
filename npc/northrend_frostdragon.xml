@@ -1,0 +1,6 @@
+<npc name="Sepher" script="data/npc/scripts/northrend_travelf.lua" autowalk="25" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="128" body="10" feet="114" head="225" legs="29" addons="3" corpse="2212"/>
+	<parameters>
+	</parameters>
+</npc>

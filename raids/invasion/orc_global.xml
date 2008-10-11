@@ -1,0 +1,88 @@
+<raid>
+<announce delay="0" type="event" message="The drums of war, can be listen once again, all humans go to a safe area!"/>
+<announce delay="90000" type="event" message="The battle between the Humans and Orcs will happen again!"/>
+<announce delay="120000" type="event" message="The Orc Army is comming in all Citys! And they look like more stronger than normal orcs!"/>
+<announce delay="180000" type="event" message="Quendor is under an orc atack!"/>
+<announce delay="220000" type="event" message="Thorn is under an orc atack!"/>
+<announce delay="270000" type="event" message="Aracura is under an orc atack!"/>
+<announce delay="300000" type="event" message="Warning: Quendor, Thorn, Aracura are under Orc control! Please stay and fight till death. The human forces must win again!"/>
+
+<areaspawn delay="180000" centerx="2070" centery="1859" centerz="7" radius="10">
+<monster name="Orc" minamount="15" maxamount="20"/>
+<monster name="Orc Spearman" minamount="5" maxamount="10"/>
+<monster name="Orc Warrior" minamount="5" maxamount="10"/>
+<monster name="Orc Shaman" minamount="5" maxamount="10"/>
+<monster name="Gazat-Burs" minamount="" maxamount="15"/>
+<monster name="Zunda-Burs" minamount="5" maxamount="15"/>
+<monster name="Krapt-Kun" minamount="5" maxamount="15"/>
+<monster name="Uruk-hai" minamount="5" maxamount="15"/>
+<monster name="Krish-Katul" minamount="5" maxamount="15"/>
+</areaspawn>
+
+<areaspawn delay="180000" centerx="2046" centery="1867" centerz="7" radius="10">
+<monster name="Orc" minamount="15" maxamount="20"/>
+<monster name="Orc Spearman" minamount="5" maxamount="10"/>
+<monster name="Orc Warrior" minamount="5" maxamount="10"/>
+<monster name="Orc Shaman" minamount="5" maxamount="10"/>
+<monster name="Gazat-Burs" minamount="" maxamount="15"/>
+<monster name="Zunda-Burs" minamount="10" maxamount="15"/>
+<monster name="Krapt-Kun" minamount="5" maxamount="15"/>
+<monster name="Uruk-hai" minamount="10" maxamount="15"/>
+<monster name="Krish-Katul" minamount="5" maxamount="15"/>
+</areaspawn>
+
+<areaspawn delay="180000" centerx="1986" centery="1806" centerz="7" radius="10">
+<monster name="Orc" minamount="15" maxamount="20"/>
+<monster name="Orc Spearman" minamount="5" maxamount="10"/>
+<monster name="Gazat-Burs" minamount="5" maxamount="15"/>
+<monster name="Zunda-Burs" minamount="5" maxamount="15"/>
+<monster name="Krapt-Kun" minamount="5" maxamount="15"/>
+<monster name="Uruk-hai" minamount="5" maxamount="15"/>
+<monster name="Krish-Katul" minamount="5" maxamount="15"/>
+</areaspawn>
+
+<areaspawn delay="270000" centerx="2055" centery="2143" centerz="7" radius="10">
+<monster name="Orc" minamount="15" maxamount="20"/>
+<monster name="Orc Spearman" minamount="5" maxamount="10"/>
+<monster name="Orc Rider" minamount="5" maxamount="10"/>
+<monster name="Gazat-Burs" minamount="5" maxamount="15"/>
+<monster name="Zunda-Burs" minamount="5" maxamount="15"/>
+<monster name="Krapt-Kun" minamount="5" maxamount="15"/>
+<monster name="Uruk-hai" minamount="5" maxamount="15"/>
+<monster name="Krish-Katul" minamount="5" maxamount="15"/>
+</areaspawn>
+
+<areaspawn delay="270000" centerx="2055" centery="2158" centerz="7" radius="10">
+<monster name="Orc" minamount="15" maxamount="20"/>
+<monster name="Orc Spearman" minamount="5" maxamount="10"/>
+<monster name="Orc Rider" minamount="5" maxamount="10"/>
+<monster name="Gazat-Burs" minamount="5" maxamount="15"/>
+<monster name="Zunda-Burs" minamount="5" maxamount="15"/>
+<monster name="Krapt-Kun" minamount="5" maxamount="15"/>
+<monster name="Uruk-hai" minamount="5" maxamount="15"/>
+<monster name="Krish-Katul" minamount="5" maxamount="15"/>
+</areaspawn>
+
+<areaspawn delay="220000" centerx="2321" centery="1858" centerz="7" radius="10">
+<monster name="Orc" minamount="15" maxamount="20"/>
+<monster name="Orc Spearman" minamount="5" maxamount="10"/>
+<monster name="Orc Warrior" minamount="5" maxamount="10"/>
+<monster name="Gazat-Burs" minamount="5" maxamount="15"/>
+<monster name="Zunda-Burs" minamount="5" maxamount="15"/>
+<monster name="Krapt-Kun" minamount="5" maxamount="15"/>
+<monster name="Uruk-hai" minamount="5" maxamount="15"/>
+<monster name="Krish-Katul" minamount="5" maxamount="15"/>
+</areaspawn>
+
+<areaspawn delay="220000" centerx="2305" centery="1856" centerz="7" radius="10">
+<monster name="Orc" minamount="15" maxamount="20"/>
+<monster name="Orc Spearman" minamount="5" maxamount="10"/>
+<monster name="Orc Rider" minamount="5" maxamount="10"/>
+<monster name="Gazat-Burs" minamount="5" maxamount="15"/>
+<monster name="Zunda-Burs" minamount="5" maxamount="15"/>
+<monster name="Krapt-Kun" minamount="5" maxamount="15"/>
+<monster name="Uruk-hai" minamount="5" maxamount="15"/>
+<monster name="Krish-Katul" minamount="5" maxamount="15"/>
+</areaspawn>
+
+</raid>

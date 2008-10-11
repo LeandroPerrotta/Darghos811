@@ -1,0 +1,6 @@
+<npc name="Captain Harmek" script="data/npc/scripts/quendor_travel.lua" autowalk="25" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="134" body="38" feet="0" head="12" legs="114" corpse="2212"/>
+	<parameters>
+	</parameters>
+</npc>

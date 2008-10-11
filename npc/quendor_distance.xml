@@ -1,0 +1,15 @@
+<npc name="Robert" script="data/npc/scripts/global_distance.lua" autowalk="25" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="129" body="50" feet="114" head="79" legs="0" corpse="2212"/>
+	<parameters>
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_sellable" value="crossbow,2455,200;bow,2456,100" />
+		<parameter key="shop_buyable" value="crossbow,2455,400;bow,2456,200;spear,2389,10;burst arrow,2546,12;power bolt,2547,6;bolt,2543,3;arrow,2544,2" />
+		
+		<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="job;name;offer" />
+		<parameter key="keyword_reply1" value="I am the seller of distance weapons." />
+		<parameter key="keyword_reply2" value="My name is Robert. Why do you ask?" />
+		<parameter key="keyword_reply3" value="I offer bow, crossbow, spear, arrow and bolts." />				
+	</parameters>
+</npc>

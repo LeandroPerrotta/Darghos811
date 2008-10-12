@@ -5,6 +5,6 @@
 	<announce delay="270000" type="event" message="Every Human needs to destroy it, or it will destroy our World!"/>
 	<announce delay="300000" type="event" message="Do not come to close of the big tree or you will die, shoot far away from it and we can keep Thorn safe!"/>
 
-	<singlespawn delay="250000" name="Ancient Tree" x="2368" y="1773" z="7"/>
+	<singlespawn delay="250000" name="ent" x="2368" y="1773" z="7"/>
 	
 </raid>

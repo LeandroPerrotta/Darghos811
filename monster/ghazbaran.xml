@@ -19,9 +19,9 @@
 </flags>
 −
 	<attacks>
-<attack name="melee" interval="2000" min="-500" max="-2975"/>
+<attack name="melee" interval="2000" min="-1200" max="-2975"/>
 −
-	<attack name="manadrain" interval="2000" chance="30" range="7" radius="3" target="1" min="-250" max="-1000">
+	<attack name="manadrain" interval="2000" chance="30" range="7" radius="3" target="1" min="-550" max="-1000">
 <attribute key="areaEffect" value="bluebubble"/>
 </attack>
 −
@@ -30,7 +30,7 @@
 <attribute key="areaEffect" value="redspark"/>
 </attack>
 −
-	<attack name="energy" interval="3000" chance="30" range="7" radius="7" target="0" min="-100" max="-890">
+	<attack name="energy" interval="3000" chance="30" range="7" radius="7" target="0" min="-300" max="-890">
 <attribute key="areaEffect" value="bigplants"/>
 </attack>
 </attacks>
@@ -83,7 +83,7 @@
 <item id="7591" chance="8000"/> --Great Health Potion
 <item id="6300" chance="12000"/>
  -- death ring
-<item id="5943" chance="15000"/>
+<item id="5943" chance="6250"/>
  -- morgaroth hearts
 −
 	<item id="2003" chance="100000">
@@ -94,7 +94,7 @@
  -- Gold Coin
   <item id="2148" chance="100000" countmax="68"/>
  -- Gold Coin
-<item id="7431" chance="20000"/>
+<item id="7431" chance="16250"/>
  -- demonbone
 	<item id="2520" chance="45000"/>
  -- demon Shield

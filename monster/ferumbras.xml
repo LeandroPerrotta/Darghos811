@@ -18,30 +18,30 @@
     <flag runonhealth="2500"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="2000" min="-100" max="-550"/>
-    <attack name="manadrain" interval="2000" chance="20" range="7" min="-300" max="-900">
+    <attack name="melee" interval="2000" min="-100" max="-750"/>
+    <attack name="manadrain" interval="2000" chance="20" range="7" min="-300" max="-1000">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
-    <attack name="poison" interval="3000" chance="20" radius="6" target="0" min="-250" max="-750">
+    <attack name="poison" interval="3000" chance="20" radius="6" target="0" min="-250" max="-850">
       <attribute key="areaEffect" value="poison"/>
     </attack>
-    <attack name="energy" interval="2000" chance="18" radius="6" target="0" min="-200" max="-600">
+    <attack name="energy" interval="2000" chance="18" radius="6" target="0" min="-200" max="-700">
       <attribute key="areaEffect" value="energy"/>
     </attack>
-    <attack name="manadrain" interval="2000" chance="16" radius="6" target="0" min="-225" max="-475">
+    <attack name="manadrain" interval="2000" chance="16" radius="6" target="0" min="-225" max="-675">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
-    <attack name="lifedrain" interval="2000" chance="21" radius="6" target="0" min="-200" max="-650">
+    <attack name="lifedrain" interval="2000" chance="21" radius="6" target="0" min="-200" max="-850">
       <attribute key="areaEffect" value="poff"/>
     </attack>
-    <attack name="strength" interval="3000" chance="20" radius="5" target="0" min="-200" max="-800">
+    <attack name="strength" interval="3000" chance="20" radius="5" target="0" min="-200" max="-900">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
-    <attack name="firecondition" interval="3000" chance="20" range="7" radius="7" target="1" min="-200" max="-1200">
+    <attack name="firecondition" interval="3000" chance="20" range="7" radius="7" target="1" min="-200" max="-1800">
       <attribute key="shootEffect" value="fire"/>
       <attribute key="areaEffect" value="firearea"/>
     </attack>
-    <attack name="lifedrain" interval="2000" chance="25" length="8" spread="0" min="-50" max="-450">
+    <attack name="lifedrain" interval="2000" chance="25" length="8" spread="0" min="-50" max="-650">
       <attribute key="areaEffect" value="greenspark"/>
     </attack>
 
@@ -87,7 +87,7 @@
  	<item id="2167" chance="34700"/> --energy ring
  	<item id="2124" chance="24500"/> --crystal ring
 	<item id="2387" chance="47800"/> --double axe
-	<item id="2421" countmax="1" chance="43333"/> //thunder hammer
+	<item id="2421" countmax="1" chance="6250"/> //thunder hammer
  	<item id="1987" chance="100000">
  	<inside>
   	<item id="2150" countmax="9" chance1="24600" chancemax="0"/> --small amethyst

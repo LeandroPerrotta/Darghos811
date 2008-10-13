@@ -832,6 +832,7 @@ bool Commands::setHouseOwner(Creature* creature, const std::string& cmd, const s
 bool Commands::sellHouse(Creature* creature, const std::string& cmd, const std::string& param)
 {
 	Player* player = creature->getPlayer();
+	int16_t housesPerAccount = g_config.getNumber(ConfigManager::HOUSES_PER_ACCOUNT);
 	if(player)
 	{
 		House* house = Houses::getInstance().getHouseByPlayerId(player->guid);
@@ -857,6 +858,14 @@ bool Commands::sellHouse(Creature* creature, const std::string& cmd, const std::
 		if(Houses::getInstance().getHouseByPlayerId(tradePartner->guid))
 		{
 			player->sendCancel("Trade player already owns a house.");
+			return false;
+		}
+		
+		if(housesPerAccount != -1 && tradePartner->getAccountHousesCount() >= housesPerAccount)
+		{
+			char buffer[75];
+			sprintf(buffer, "Trade player has reached limit of %u %s per account.", housesPerAccount, (housesPerAccount == 1 ? "house" : "houses"));
+			player->sendCancel(buffer);
 			return false;
 		}
 
@@ -930,17 +939,22 @@ bool Commands::serverInfo(Creature* creature, const std::string& cmd, const std:
 bool Commands::buyHouse(Creature* creature, const std::string& cmd, const std::string& param)
 {
 	Player* player = creature->getPlayer();
+	int16_t housesPerAccount = g_config.getNumber(ConfigManager::HOUSES_PER_ACCOUNT);
 	if(player)
 	{
 		Position pos = player->getPosition();
 		pos = getNextPosition(player->direction, pos);
-		for(HouseMap::iterator it = Houses::getInstance().getHouseBegin(); it != Houses::getInstance().getHouseEnd(); it++)
+	if(Houses::getInstance().getHouseByPlayerId(player->getGUID())) //Elf: removed own loop from here
 		{
-			if(it->second->getHouseOwner() == player->guid)
-			{
-				player->sendCancel("You are already the owner of a house.");
-				return false;
-			}
+			player->sendCancel("You are already owner of another house.");
+			return false;
+		}
+		if(housesPerAccount != -1 && player->getAccountHousesCount() >= housesPerAccount)
+		{
+			char buffer[50];
+			sprintf(buffer, "You may own only %u %s per account.", housesPerAccount, (housesPerAccount == 1 ? "house" : "houses"));
+			player->sendCancel(buffer);
+			return false;
 		}
 		if(Tile* tile = g_game.getTile(pos.x, pos.y, pos.z))
 		{

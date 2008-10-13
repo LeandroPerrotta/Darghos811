@@ -195,6 +195,10 @@ Item::Item(const uint16_t _type, uint16_t _count /*= 0*/) :
 	count = 1;
 	charges = it.charges;
 	fluid = 0;
+	#ifdef __CODE__
+	moveTicks = 0;
+	ownerBody = 0;
+	#endif
 
 	if(it.isFluidContainer() || it.isSplash())
 		fluid = _count;
@@ -215,6 +219,10 @@ Item::Item(const Item &i) :
 	count = i.count;
 	charges = i.charges;
 	fluid = i.fluid;
+	#ifdef __CODE__
+		moveTicks = 0;
+	ownerBody = 0;
+	#endif
 	
 	m_attributes = i.m_attributes;
 	if(i.m_firstAttr)

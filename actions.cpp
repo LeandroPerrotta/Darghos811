@@ -214,6 +214,12 @@ ReturnValue Actions::internalUseItem(Player* player, const Position& pos,
 		if(!door->canUse(player))
 			return RET_CANNOTUSETHISOBJECT;
 	}
+	
+	#ifdef __CODE__
+	if(item->moveTicks > 0 && item->ownerBody != player->ownerBody && player->party == NULL){
+		return RET_WAITTIMEFOROPEN;
+    }
+    #endif
 
 	if(BedItem* bed = item->getBed())
 	{

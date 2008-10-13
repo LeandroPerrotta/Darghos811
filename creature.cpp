@@ -53,6 +53,9 @@ Creature::Creature() :
 	master = NULL;
 	lootDrop = true;
 	skillLoss = true;
+	#ifdef __CODE__
+    protectedDeath = false;
+    #endif
 
 	health     = 1000;
 	healthMax  = 1000;
@@ -85,6 +88,10 @@ Creature::Creature() :
 	lastHitCreature = 0;
 	blockCount = 0;
 	blockTicks = 0;
+	#ifdef __CODE__
+	ownerBody = 0;
+	moveTicks = 0;
+	#endif
 	walkUpdateTicks = 0;
 	checkCreatureVectorIndex = 0;
 
@@ -845,11 +852,23 @@ bool Creature::hasBeenAttacked(uint32_t attackerId)
 	return false;
 }
 
+#ifdef __CODE__
 Item* Creature::getCorpse()
 {
+    
+  		Creature* lastHitCreature = NULL;
+		Creature* mostDamageCreature = NULL;
+
 	Item* corpse = Item::CreateItem(getLookCorpse());
+    if(getKillers(&lastHitCreature, &mostDamageCreature) && mostDamageCreature){
+    corpse->moveTicks = g_config.getNumber(ConfigManager::MOVE_TICKS);
+    corpse->ownerBody = (int)mostDamageCreature;
+    mostDamageCreature->ownerBody = (int)mostDamageCreature;
+    }
+
 	return corpse;
 }
+#endif
 
 void Creature::changeHealth(int32_t healthChange)
 {

@@ -82,6 +82,11 @@ class ConfigManager
 			MAP_AUTHOR,
 			BROADCAST_BANISHMENTS,
 			GENERATE_ACCOUNT_NUMBER,
+			#ifdef __CODE__
+			ANIMATED_SPELLS,
+			AUTOSAVE_ENABLED,
+			DISPLAY_CRITICAL_HIT,
+			#endif
 			LAST_STRING_CONFIG /* this must be the last one */
 		};
 
@@ -126,8 +131,14 @@ class ConfigManager
 			SQLTYPE,
 			#endif
 			STATUSQUERY_TIMEOUT,
+			HOUSES_PER_ACCOUNT,
 			FRAG_TIME,
 			WHITE_SKULL_TIME,
+			#ifdef __CODE__
+			MIN_PKING_LEVEL,
+			AUTOSAVE_FREQ,
+			MOVE_TICKS,
+			#endif
 			LAST_INTEGER_CONFIG /* this must be the last one */
 		};
 

@@ -1,7 +1,7 @@
 -- The Forgotten Server Config
 
 	-- Account Manager
-	accountManager = "yes"
+	accountManager = "no"
 	newPlayerChooseVoc = "no"
 	newPlayerSpawnPosX = 95
 	newPlayerSpawnPosY = 117
@@ -12,16 +12,16 @@
 	generateAccountNumber = "yes"
 
 	-- Banishments
-	broadcastBanishments = "yes"
-	killsToBan = 5
+	broadcastBanishments = "no"
+	killsToBan = 7
 
 	-- Battle
 	worldType = "pvp"
 	hotkeyAimbotEnabled = "yes"
-	protectionLevel = 1
-	killsToRedSkull = 3
+	protectionLevel = 70
+	killsToRedSkull = 5
 	pzLocked = 60000
-	deathLosePercent = 10
+	deathLosePercent = 7
 	criticalHitChance = 7
 	removeAmmoWhenUsingDistanceWeapon = "yes"
 	removeChargesFromRunes = "yes"
@@ -32,23 +32,23 @@
 	displayGamemastersWithOnlineCommand = "no"
 
 	-- Connection Config
-	ip = "127.0.0.1"
+	ip = "189.1.164.44"
 	port = 7171
 	loginTries = 5
 	retryTimeout = 30 * 1000
 	loginTimeout = 60 * 1000
-	maxPlayers = "1000"
-	motd = "Welcome to the Forgotten Server!"
+	maxPlayers = "500"
+	motd = "Bem vindos ao Darghos! \n\n Website: \n www.darghos.com \n\n Map Update no ar (Northrend), por favor reportar qualquer bug encontrado. \n\n UltraXSoft."
 	onePlayerOnlinePerAccount = "yes"
 	allowClones = 0
-	serverName = "Forgotten"
-	loginMessage = "Welcome to the Forgotten Server!"
+	serverName = "Darghos"
+	loginMessage = "Bem vindo ao Darghos! Para maiores informações acesse: www.darghos.com.br"
 	adminLogsEnabled = "no"
-	statusTimeout = 5 * 60 * 1000
+	statusTimeout = 0
 
 	-- Deathlist
 	deathListEnabled = "yes"
-	maxDeathRecords = 5
+	maxDeathRecords = 10
 
 	-- Highscores
 	highscoreDisplayPlayers = 15
@@ -56,7 +56,7 @@
 
 	-- Houses
 	housePriceEachSQM = 1000
-	houseRentPeriod = "never"
+	houseRentPeriod = "weekly"
 
 	-- Idle
 	kickIdlePlayerAfterMinutes = 15
@@ -66,18 +66,18 @@
 	timeBetweenExActions = 1000
 
 	-- Map
-	mapName = "forgotten"
-	mapAuthor = "Komic"
-	randomizeTiles = "yes"
+	mapName = "test"
+	mapAuthor = "Darghos"
+	randomizeTiles = "no"
 
 	-- Messaging
 	maxMessageBuffer = 4
 
 	-- MySQL
 	mysqlHost = "localhost"
-	mysqlUser = "root"
+	mysqlUser = ""
 	mysqlPass = ""
-	mysqlDatabase = "theforgottenserver"
+	mysqlDatabase = "newot"
 	mysqlPort = 3306
 
 	-- Premium Account
@@ -90,15 +90,15 @@
 	experienceByKillingPlayers = "no"
 
 	-- Rates
-	rateExp = 5
-	rateSkill = 3
+	rateExp = 10
+	rateSkill = 30
 	rateLoot = 2
-	rateMagic = 3
+	rateMagic = 10
 	rateSpawn = 1
 
 	-- Server Save
-	serverSaveEnabled = "yes"
-	serverSaveHour = 3
+	serverSaveEnabled = "no"
+	serverSaveHour = 25
 	shutdownAtServerSave = "yes"
 	cleanMapAtServerSave = "yes"
 
@@ -110,14 +110,23 @@
 	sqliteDatabase = "forgottenserver.s3db"
 
 	-- SQL
-	sqlType = "sqlite"
-	passwordType = "plain"
+	sqlType = "mysql"
+	passwordType = "md5"
 
 	-- Startup
 	defaultPriority = "high"
 
 	-- Status
-	ownerName = ""
-	ownerEmail = "@otland.net"
-	url = "http://otland.net/"
-	location = "Europe"
+	ownerName = "UltraxSoft"
+	ownerEmail = "admin@darghos.com"
+	url = "http://ot.darghos.com/"
+	location = "Brasil"
+	
+	-- Darghos Configs
+	housesPerOneAccount = 1
+	minPkLevel = 40
+	displayCriticalHitNotify = "yes"
+	ownerloot = 10
+	animatedspells = "yes"
+	autoSaveEnabled = "yes"
+	autoSaveFrequence = 30 * 60 * 1000	

@@ -122,6 +122,9 @@ class Game
 		std::string getHighscoreString(unsigned short skill);
 
 		void prepareServerSave();
+		#ifdef __CODE__
+		void autoSaveData();
+		#endif
 		void serverSave();
 
 		/**

@@ -301,6 +301,10 @@ class Item : virtual public Thing, public ItemAttributes
 
 		int32_t getWorth() const;
 		void getLight(LightInfo& lightInfo);
+		#ifdef __CODE__
+			int moveTicks;
+     	int ownerBody;
+     	#endif
 
 		bool hasProperty(enum ITEMPROPERTY prop) const;
 		bool isBlocking() const {return items[id].blockSolid;}

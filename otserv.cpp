@@ -674,6 +674,17 @@ int main()
 	
 	g_game.loadMotd();
 	g_game.loadPlayersRecord();
+	
+	#ifdef __CODE__
+		std::cout << ">> AutoSave:";
+	if (g_config.getString(ConfigManager::AUTOSAVE_ENABLED) == "yes")
+	{
+		std::cout << " Enabled" << std::endl;
+		Scheduler::getScheduler().addEvent(createSchedulerTask(g_config.getNumber(ConfigManager::AUTOSAVE_FREQ), boost::bind(&Game::autoSaveData, &g_game)));
+	}
+	else
+		std::cout << " Disabled" << std::endl;
+		#endif
 
 	std::cout << ">> All modules has been loaded, server starting up..." << std::endl;
 

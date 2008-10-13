@@ -915,6 +915,10 @@ void Player::sendCancelMessage(ReturnValue message) const
 		case RET_CANNOTUSETHISOBJECT:
 			sendCancel("You can not use this object.");
 			break;
+			
+			case RET_WAITTIMEFOROPEN:
+			sendCancel("Only the owner can open this corpse. wait 5 seconds to open.");
+			break;
 
 		case RET_PLAYERWITHTHISNAMEISNOTONLINE:
 			sendCancel("A player with this name is not online.");
@@ -1056,6 +1060,10 @@ void Player::sendPing(uint32_t interval)
 		npings++;
 		if(client)
 			client->sendPing();
+			#ifdef __CODE__
+			else
+			setAttackedCreature(NULL);
+			#endif
 	}
 
 	if(canLogout())
@@ -1982,6 +1990,10 @@ void Player::death()
 
 	if(skillLoss)
 	{
+                 #ifdef __CODE__
+                 if (!protectedDeath)
+        {
+                 #endif
 		//Magic level loss
 		uint32_t sumMana = 0;
 		uint64_t lostMana = 0;
@@ -2056,8 +2068,13 @@ void Player::death()
 		uint64_t currLevelExp = Player::getExpForLevel(newLevel);
 		levelPercent = Player::getPercentLevel(experience - currLevelExp - getLostExperience(), Player::getExpForLevel(newLevel + 1) - currLevelExp);
 
-		if(!inventory[SLOT_BACKPACK])
-			__internalAddThing(SLOT_BACKPACK, Item::CreateItem(1987));
+		 if(!inventory[SLOT_BACKPACK])
+                __internalAddThing(SLOT_BACKPACK, Item::CreateItem(1987));
+        }
+        else
+        {
+            levelPercent = 0;
+        }
 	}
 	sendStats();
 	sendSkills();
@@ -3338,6 +3355,14 @@ void Player::onKilledCreature(Creature* target)
 				!targetPlayer->hasAttacked(this) &&
 				targetPlayer->getSkull() == SKULL_NONE)
 				addUnjustifiedDead(targetPlayer);
+				
+			#ifdef __CODE__
+			if (Combat::isProtected(targetPlayer))
+                {
+                    targetPlayer->setProtectedDeath(true);
+                    targetPlayer->setDropLoot(false);
+                }
+                #endif
 
 			if(!Combat::isInPvpZone(this, targetPlayer) && hasCondition(CONDITION_INFIGHT))
 			{
@@ -4231,3 +4256,25 @@ Shields_t Player::getShieldClient(Player* player)
 	}
 	return shield;
 }
+
+void Player::sendCriticalHit() const
+{
+	if(g_config.getString(ConfigManager::DISPLAY_CRITICAL_HIT) == "yes")
+		g_game.addAnimatedText(getPosition(), TEXTCOLOR_WHITE_EXP, "Critical Hit!");
+}
+
+uint16_t Player::getAccountHousesCount()
+{
+	Account account = IOLoginData::getInstance()->loadAccount(getAccount());
+	uint32_t _guid;
+	uint16_t count = 0;
+
+	for(std::list<std::string>::iterator it = account.charList.begin(); it != account.charList.end(); it++)
+	{
+		IOLoginData::getInstance()->getGuidByName(_guid, (*it));
+		if(Houses::getInstance().getHouseByPlayerId(_guid))
+			count++;
+	}
+	return count;
+}
+

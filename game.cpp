@@ -211,6 +211,15 @@ void Game::saveGameState(bool savePlayers)
 #endif
 }
 
+#ifdef __CODE__
+void Game::autoSaveData()
+{
+	std::cout << ">> Server has been saved. " << std::endl;
+	saveGameState(true);
+	Scheduler::getScheduler().addEvent(createSchedulerTask(g_config.getNumber(ConfigManager::AUTOSAVE_FREQ), boost::bind(&Game::autoSaveData, this)));
+}
+#endif
+
 void Game::loadGameState()
 {
 #ifdef __GLOBAL_STORAGE__
@@ -988,6 +997,14 @@ bool Game::playerMoveItem(uint32_t playerId, const Position& fromPos,
 		player->sendCancelMessage(RET_NOTMOVEABLE);
 		return false;
 	}
+	
+	#ifdef __CODE__
+		if(item->moveTicks > 0 && item->ownerBody != player->ownerBody && player->party == NULL)
+    {
+		player->sendCancelMessage(RET_NOTMOVEABLE);
+		return false;
+	}
+	#endif
 
 	const Position& playerPos = player->getPosition();
 	const Position& mapFromPos = fromCylinder->getTile()->getPosition();
@@ -3094,13 +3111,15 @@ bool Game::playerSaySpell(Player* player, SpeakClasses type, const std::string& 
 		return internalCreatureSay(player, SPEAK_SAY, text);
 
 	TalkActionResult_t result;
-	result = g_talkActions->playerSaySpell(player, type, text);
-	if(result == TALKACTION_BREAK)
-		return true;
-
 	result = g_spells->playerSaySpell(player, type, text);
-	if(result == TALKACTION_BREAK)
-		return internalCreatureSay(player, SPEAK_SAY, text);
+     if(result == TALKACTION_BREAK){
+        if(g_config.getString(ConfigManager::ANIMATED_SPELLS) == "yes"){   
+          //std::string _text = (g_config.getBool(ConfigManager::SPELL_NAME_INSTEAD_WORDS) ? g_spells->getInstantSpell(text)->getName() : text);    
+            return internalCreatureSay(player, SPEAK_MONSTER_SAY, text);
+	    }else{
+            return internalCreatureSay(player, SPEAK_SAY, text);
+       }  	
+	}
 	else if(result == TALKACTION_FAILED)
 		return true;
 
@@ -3920,6 +3939,15 @@ void Game::checkDecay()
 	{
 		item = *it;
 		item->decreaseDuration(EVENT_DECAYINTERVAL);
+		
+		#ifdef __CODE__
+		if (item->moveTicks > 0){
+       item->moveTicks -= 10;
+       }
+       if (item->moveTicks < 0){
+       item->moveTicks == 0;
+       }
+       #endif
 
 		if(!item->canDecay())
 		{

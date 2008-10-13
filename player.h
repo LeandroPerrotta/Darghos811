@@ -283,6 +283,7 @@ class Player : public Creature, public Cylinder
 		virtual bool canSeeCreature(const Creature* creature) const;
 
 		virtual RaceType_t getRace() const {return RACE_BLOOD;}
+		uint16_t getAccountHousesCount();
 
 		//safe-trade functions
 		void setTradeState(tradestate_t state) {tradeState = state;}
@@ -554,6 +555,7 @@ class Player : public Creature, public Cylinder
 
 		virtual void onThink(uint32_t interval);
 		virtual void onAttacking(uint32_t interval);
+		void sendCriticalHit() const;
 
 		virtual void postAddNotification(Thing* thing, int32_t index, cylinderlink_t link = LINK_OWNER);
 		virtual void postRemoveNotification(Thing* thing, int32_t index, bool isCompleteRemoval, cylinderlink_t link = LINK_OWNER);

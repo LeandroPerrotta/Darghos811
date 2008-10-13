@@ -123,7 +123,7 @@ bool ConfigManager::loadFile(const std::string& _filename)
 	m_confString[DEFAULT_PRIORITY] = getGlobalString(L, "defaultPriority", "high");
 	m_confString[EXPERIENCE_FROM_PLAYERS] = getGlobalString(L, "experienceByKillingPlayers", "no");
 	m_confString[SHUTDOWN_AT_SERVERSAVE] = getGlobalString(L, "shutdownAtServerSave", "no");
-	m_confString[CLEAN_MAP_AT_SERVERSAVE] = getGlobalString(L, "cleanMapAtServerSave", "yes");
+	m_confString[CLEAN_MAP_AT_SERVERSAVE] = getGlobalString(L, "cleanMapAtServerSave", "no");
 	m_confString[FREE_PREMIUM] = getGlobalString(L, "freePremium", "no");
 	m_confInteger[PROTECTION_LEVEL] = getGlobalNumber(L, "protectionLevel", 1);
 	m_confString[ADMIN_LOGS_ENABLED] = getGlobalString(L, "adminLogsEnabled", "no");
@@ -131,8 +131,17 @@ bool ConfigManager::loadFile(const std::string& _filename)
 	m_confInteger[STATUSQUERY_TIMEOUT] = getGlobalNumber(L, "statusTimeout", 5 * 60 * 1000);
 	m_confString[BROADCAST_BANISHMENTS] = getGlobalString(L, "broadcastBanishments", "yes");
 	m_confString[GENERATE_ACCOUNT_NUMBER] = getGlobalString(L, "generateAccountNumber", "yes");
+	m_confInteger[HOUSES_PER_ACCOUNT] = getGlobalNumber(L, "housesPerOneAccount", -1);
 	m_confInteger[FRAG_TIME] = getGlobalNumber(L, "timeToDecreaseFrags", 24 * 60 * 60 * 1000);
 	m_confInteger[WHITE_SKULL_TIME] = getGlobalNumber(L, "whiteSkullTime", 15 * 60 * 1000);
+	#ifdef __CODE__
+	m_confInteger[MIN_PKING_LEVEL] = getGlobalNumber(L, "minPkLevel", 1);
+	m_confString[ANIMATED_SPELLS] = getGlobalString(L, "animatedspells", "no");
+	m_confString[AUTOSAVE_ENABLED] = getGlobalString(L, "autoSaveEnabled", "no");
+	m_confInteger[AUTOSAVE_FREQ] = getGlobalNumber(L, "autoSaveFrequence", 30 * 60 * 1000);
+	m_confInteger[MOVE_TICKS] = getGlobalNumber(L, "ownerloot", 5);
+	m_confString[DISPLAY_CRITICAL_HIT] = getGlobalString(L, "displayCriticalHitNotify", "no");
+	#endif
 	m_isLoaded = true;
 
 	lua_close(L);

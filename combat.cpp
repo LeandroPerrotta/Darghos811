@@ -325,16 +325,22 @@ bool Combat::isInPvpZone(const Creature* attacker, const Creature* target)
 	return true;
 }
 
+bool Combat::isProtected(const Player* player)
+{
+    uint32_t protectionLevel = g_config.getNumber(ConfigManager::PROTECTION_LEVEL);
+
+    if (player->getLevel() < protectionLevel)
+    {
+        return true;
+    }
+
+    return false;
+}
+
 bool Combat::isProtected(const Player* attacker, const Player* target)
 {
 	uint32_t protectionLevel = g_config.getNumber(ConfigManager::PROTECTION_LEVEL);
 	if(target->getLevel() < protectionLevel || attacker->getLevel() < protectionLevel)
-		return true;
-
-	if(attacker->getVocationId() == 0 || target->getVocationId() == 0)
-		return true;
-
-	if(attacker->getName() == "Account Manager" || target->getName() == "Account Manager")
 		return true;
 
 	return false;
@@ -354,8 +360,13 @@ ReturnValue Combat::canDoCombat(const Creature* attacker, const Creature* target
 				if(attackerPlayer->hasFlag(PlayerFlag_CannotAttackPlayer))
 					return RET_YOUMAYNOTATTACKTHISPLAYER;
 
-				if(isProtected(attackerPlayer, targetPlayer))
-					return RET_YOUMAYNOTATTACKTHISPLAYER;
+             #ifdef __CODE__
+			if(attackerPlayer->getLevel() < g_config.getNumber(ConfigManager::MIN_PKING_LEVEL) && targetPlayer->getSkull() == SKULL_NONE && !targetPlayer->hasAttacked(attackerPlayer))
+                    return RET_YOUMAYNOTATTACKTHISPLAYER;
+                    #endif
+
+				/*if(isProtected(attackerPlayer, targetPlayer))
+					return RET_YOUMAYNOTATTACKTHISPLAYER;*/
 
 				//nopvp-zone
 				if(targetPlayer->getTile()->hasFlag(TILESTATE_NOPVPZONE))

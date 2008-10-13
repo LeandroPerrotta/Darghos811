@@ -253,6 +253,10 @@ class Creature : public AutoID, virtual public Thing
 		virtual uint32_t getConditionSuppressions() const {return 0;}
 		virtual bool isAttackable() const {return true;}
 		bool idle() const { return checkCreatureVectorIndex == 0; }
+		#ifdef __CODE__
+		int ownerBody;
+        int moveTicks;
+        #endif
 
 		virtual void changeHealth(int32_t healthChange);
 		virtual void changeMana(int32_t manaChange);
@@ -326,6 +330,7 @@ class Creature : public AutoID, virtual public Thing
 		uint32_t getSummonCount() const {return summons.size();}
 		void setDropLoot(bool _lootDrop) {lootDrop = _lootDrop;}
 		void setLossSkill(bool _skillLoss) {skillLoss = _skillLoss;}
+        void setProtectedDeath(bool _protectedDeath) {protectedDeath = _protectedDeath;}
 
 		//creature script events
 		bool registerCreatureEvent(const std::string& name);
@@ -374,6 +379,9 @@ class Creature : public AutoID, virtual public Thing
 		int32_t varSpeed;
 		bool skillLoss;
 		bool lootDrop;
+		#ifdef __CODE__
+		bool protectedDeath;
+		#endif
 		Direction direction;
 		ConditionList conditions;
 		LightInfo internalLight;

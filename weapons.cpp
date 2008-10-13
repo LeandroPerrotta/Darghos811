@@ -379,7 +379,10 @@ bool Weapon::useFist(Player* player, Creature* target)
 
 		int32_t maxDamage = Weapons::getMaxWeaponDamage(attackSkill, attackValue);
 		if(random_range(1, 100) <= g_config.getNumber(ConfigManager::CRITICAL_HIT_CHANCE))
+		{
 			maxDamage <<= 1;
+			player->sendCriticalHit();
+		}
 		int32_t damage = -(random_range(0, maxDamage, DISTRO_NORMAL) * attackStrength) / 100;
 
 		CombatParams params;
@@ -632,7 +635,10 @@ int32_t WeaponMelee::getWeaponDamage(const Player* player, const Creature* targe
 	int32_t attackValue = item->getAttack();
 	int32_t maxValue = Weapons::getMaxWeaponDamage(attackSkill, attackValue);
 	if(random_range(1, 100) <= g_config.getNumber(ConfigManager::CRITICAL_HIT_CHANCE))
+		{
 		maxValue <<= 1;
+		player->sendCriticalHit();
+	}
 	if(vocation && vocation->meleeDamageMultipler != 1.0)
 		maxValue = int32_t(maxValue * vocation->meleeDamageMultipler);
 	if(maxDamage)
@@ -852,7 +858,10 @@ int32_t WeaponDistance::getWeaponDamage(const Player* player, const Creature* ta
 	int32_t attackStrength = player->getAttackStrength();
 	int32_t maxValue = Weapons::getMaxWeaponDamage(attackSkill, ammuAttackValue);
 	if(random_range(1, 100) <= g_config.getNumber(ConfigManager::CRITICAL_HIT_CHANCE))
+	{
 		maxValue <<= 1;
+		player->sendCriticalHit();
+	}
 	Vocation* vocation = player->getVocation();
 	if(vocation && vocation->distDamageMultipler != 1.0)
 		maxValue = int32_t(maxValue * vocation->distDamageMultipler);
@@ -953,7 +962,10 @@ bool WeaponWand::configureWeapon(const ItemType& it)
 int32_t WeaponWand::getWeaponDamage(const Player* player, const Creature* target, const Item* item, bool maxDamage /*= false*/) const
 {
 	if(maxDamage)
+	{
+		player->sendCriticalHit();
 		return -maxChange;
+	}
 
 	return random_range(-minChange, -maxChange, DISTRO_NORMAL);
 }

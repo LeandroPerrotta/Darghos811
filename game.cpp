@@ -193,15 +193,24 @@ void Game::setGameState(GameState_t newState)
 	}
 }
 
+#ifdef __CODE__
 void Game::saveGameState(bool savePlayers)
 {
 	if(savePlayers)
 	{
+        int64_t start = OTSYS_TIME();
+        int32_t playersSaved = 0;
+
+        std::cout << ">> Salvando jogadores..." << std::endl;
+
 		for(AutoList<Player>::listiterator it = Player::listPlayer.list.begin(); it != Player::listPlayer.list.end(); ++it)
 		{
 			(*it).second->loginPosition = (*it).second->getPosition();
 			IOLoginData::getInstance()->savePlayer((*it).second, false);
+			playersSaved++;
 		}
+
+        std::cout << ">> Foram salvos " << playersSaved << " jogadores em " << (OTSYS_TIME() - start) / (1000.) << " segundos." << std::endl;
 	}
 
 	g_bans.saveBans();
@@ -211,10 +220,8 @@ void Game::saveGameState(bool savePlayers)
 #endif
 }
 
-#ifdef __CODE__
 void Game::autoSaveData()
 {
-	std::cout << ">> Server has been saved. " << std::endl;
 	saveGameState(true);
 	Scheduler::getScheduler().addEvent(createSchedulerTask(g_config.getNumber(ConfigManager::AUTOSAVE_FREQ), boost::bind(&Game::autoSaveData, this)));
 }
@@ -997,7 +1004,7 @@ bool Game::playerMoveItem(uint32_t playerId, const Position& fromPos,
 		player->sendCancelMessage(RET_NOTMOVEABLE);
 		return false;
 	}
-	
+
 	#ifdef __CODE__
 		if(item->moveTicks > 0 && item->ownerBody != player->ownerBody && player->party == NULL)
     {
@@ -3111,17 +3118,21 @@ bool Game::playerSaySpell(Player* player, SpeakClasses type, const std::string& 
 		return internalCreatureSay(player, SPEAK_SAY, text);
 
 	TalkActionResult_t result;
+	result = g_talkActions->playerSaySpell(player, type, text);
+	if(result == TALKACTION_BREAK)
+		return true;
+
 	result = g_spells->playerSaySpell(player, type, text);
-     if(result == TALKACTION_BREAK){
-        if(g_config.getString(ConfigManager::ANIMATED_SPELLS) == "yes"){   
-          //std::string _text = (g_config.getBool(ConfigManager::SPELL_NAME_INSTEAD_WORDS) ? g_spells->getInstantSpell(text)->getName() : text);    
+	if(result == TALKACTION_BREAK){
+        if(g_config.getString(ConfigManager::ANIMATED_SPELLS) == "yes"){
             return internalCreatureSay(player, SPEAK_MONSTER_SAY, text);
 	    }else{
             return internalCreatureSay(player, SPEAK_SAY, text);
-       }  	
+       }
 	}
-	else if(result == TALKACTION_FAILED)
+	else if(result == TALKACTION_FAILED){
 		return true;
+	}
 
 	return false;
 }
@@ -3939,7 +3950,7 @@ void Game::checkDecay()
 	{
 		item = *it;
 		item->decreaseDuration(EVENT_DECAYINTERVAL);
-		
+
 		#ifdef __CODE__
 		if (item->moveTicks > 0){
        item->moveTicks -= 10;

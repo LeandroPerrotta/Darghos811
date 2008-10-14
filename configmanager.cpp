@@ -136,7 +136,6 @@ bool ConfigManager::loadFile(const std::string& _filename)
 	m_confInteger[WHITE_SKULL_TIME] = getGlobalNumber(L, "whiteSkullTime", 15 * 60 * 1000);
 	#ifdef __CODE__
 	m_confInteger[MIN_PKING_LEVEL] = getGlobalNumber(L, "minPkLevel", 1);
-	m_confString[ANIMATED_SPELLS] = getGlobalString(L, "animatedspells", "no");
 	m_confString[AUTOSAVE_ENABLED] = getGlobalString(L, "autoSaveEnabled", "no");
 	m_confInteger[AUTOSAVE_FREQ] = getGlobalNumber(L, "autoSaveFrequence", 30 * 60 * 1000);
 	m_confInteger[MOVE_TICKS] = getGlobalNumber(L, "ownerloot", 5);

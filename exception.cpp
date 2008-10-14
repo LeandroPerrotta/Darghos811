@@ -345,7 +345,7 @@ bool ExceptionHandler::LoadMap()
 	int32_t n = 0;
 	if(!input)
 	{
-		std::cout << "Failed loading symbols. forgottenserver.map not found. " << std::endl;
+		std::cout << "Failed loading symbols. darghos.map not found. " << std::endl;
 		exit(1);
 		return false;
 	}

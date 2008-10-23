@@ -1,0 +1,8 @@
+<stages>
+	<config enabled="1" />
+	<stage minlevel="1" maxlevel="100" multiplier="12" />
+	<stage minlevel="101" maxlevel="150" multiplier="8" />
+	<stage minlevel="151" maxlevel="250" multiplier="6" />
+	<stage minlevel="251" maxlevel="300" multiplier="4" />
+	<stage minlevel="301" multiplier="2" />
+</stages>

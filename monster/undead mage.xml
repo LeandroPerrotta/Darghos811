@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Undead Mage" nameDescription="a undead" race="blood" experience="10000" speed="240" manacost="0">
+  <health now="10000" max="10000"/>
+  <look type="9" head="0" body="0" legs="0" feet="0" corpse="3058"/>
+  <targetchange interval="2000" chance="50"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="8"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="1600" skill="10" attack="10"/>
+    <attack name="physical" interval="1000" chance="50" range="7" min="-45" max="-105">
+      <attribute key="shootEffect" value="energy"/>
+    </attack>
+    <attack name="manadrain" interval="1000" chance="17" range="7" min="-35" max="-75"/>
+    <attack name="speed" interval="1000" chance="12" range="7" speedchange="-600" duration="40000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+    <attack name="fire" interval="1000" chance="34" range="7" radius="3" target="1" min="-200" max="-400">
+      <attribute key="shootEffect" value="fire"/>
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+    <attack name="firefield" interval="1000" chance="15" range="7" radius="1" target="1">
+      <attribute key="shootEffect" value="fire"/>
+    </attack>
+    <attack name="firefield" interval="1000" chance="20" range="7" radius="20" target="1">
+      <attribute key="shootEffect" value="fire"/>
+    </attack>
+    <attack name="energy" interval="1000" chance="13" length="8" spread="0" min="-305" max="-505">
+      <attribute key="areaEffect" value="energy"/>
+    </attack>
+  </attacks>
+  <defenses armor="25" defense="30">
+    <defense name="healing" interval="1000" chance="25" min="60" max="100">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="invisible" interval="10000" chance="50" duration="10000"> --each 7 sec invi duration 5 sec
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity physical="1"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <summons maxSummons="1">
+    <summon name="Necromancer" interval="1000" chance="10" max="2"/>
+  </summons>
+  <voices interval="5000" chance="10">
+    <voice sentence="I bet i will win!"/>
+    <voice sentence="Even a warlock is a better mage than you."/>
+    <voice sentence="I don't like intruders!"/>
+  </voices>
+  <loot capacity="900">
+    <item id="2656" countmax="1" chance="1400"/> //blue robe 
+    <item id="2148" countmax="50" chance="95000"/> //gold	
+	<item id="2148" countmax="50" chance="50000"/> //gold
+    <item id="2466" countmax="1" chance="500"/> //golden armor
+	<item id="2514" countmax="1" chance="300"/>
+    <item id="1986" countmax="1" chance="700"/> //red tome
+	<item id="2663" countmax="1" chance="3500"/>
+    <item id="2123" countmax="1" chance="500"/> //ring of the sky        
+    <item id="2197" countmax="1" chance="2000"/> /stone skin amulet
+	<item id="2195" countmax="1" chance="200"/>
+    <item id="2151" countmax="1" chance="20000"/> //talon
+	
+	<item id="1987" countmax="1" chance="100000">
+		<inside>
+			<item id="2520" countmax="1" chance="800"/>//demon shield
+			<item id="2472" countmax="1" chance="300"/>
+			<item id="2393" countmax="1" chance="1400"/>
+			<item id="2432" countmax="1" chance="1900"/>
+			<item id="2164" countmax="1" chance="5000"/>//might ring
+			<item id="2462" countmax="1" chance="6000"/>//devil helmet
+			<item id="1982" countmax="1" chance="8000"/>//purpel tome
+			<item id="2171" countmax="1" chance="3500"/>//platinum amulet  
+		</inside>
+	</item>		
+  </loot>
+</monster>

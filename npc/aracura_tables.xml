@@ -1,0 +1,14 @@
+<npc name="Paul" script="data/npc/scripts/global_furniture.lua" autowalk="25" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="131" body="94" feet="114" head="116" legs="114" corpse="2212"/>
+	<parameters>
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_buyable" value="big table,3909,30;round table,3911,25;small table,3912,20;square table,3910,25" />
+
+		<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="job;name;offer" />
+		<parameter key="keyword_reply1" value="I sell containers for your house." />
+		<parameter key="keyword_reply2" value="My name is Paul. Why do you ask?" />
+		<parameter key="keyword_reply3" value="I offer big table, round table, small table and square table." />	
+		</parameters>
+</npc>

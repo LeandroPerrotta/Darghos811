@@ -1,0 +1,14 @@
+<npc name="Elabreus" script="data/npc/scripts/missao_1.lua" autowalk="25" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="80" corpse="2212"/>
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|." />
+		
+		
+		<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="job;name;offer" />
+		<parameter key="keyword_reply1" value="I am the missioner of Djin Tower." />
+		<parameter key="keyword_reply2" value="My name is Elabreus." />
+		<parameter key="keyword_reply3" value="Say 'Mission' and I give for you, an acess for go to the missions of Djin Tower Quest." />	
+	</parameters>
+</npc>

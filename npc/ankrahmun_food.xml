@@ -1,0 +1,14 @@
+<npc name="Arito" script="data/npc/scripts/global_food.lua" autowalk="25" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="136" body="102" feet="0" head="116" legs="114" corpse="2212"/>
+	<parameters>
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_buyable" value="meat,2666,10;ham,2671,16;cheese,2696,12;bread,2689,8" />
+
+		<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="job;name;offer" />
+		<parameter key="keyword_reply1" value="I am the seller of victuals." />
+		<parameter key="keyword_reply2" value="My name is Arito. Why do you ask?" />
+		<parameter key="keyword_reply3" value="I offer meat, ham, cheese and bread." />	
+		</parameters>
+</npc>

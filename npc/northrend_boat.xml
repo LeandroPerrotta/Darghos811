@@ -1,0 +1,6 @@
+<npc name="Captain Bartoer" script="data/npc/scripts/northrend_travel.lua" autowalk="25" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="134" body="49" feet="49" head="76" legs="95" corpse="2212"/>
+	<parameters>
+	</parameters>
+</npc>

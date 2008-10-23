@@ -1,0 +1,36 @@
+<raid>
+<announce delay="0" type="event" message="Bug plague in Thorn!"/>
+
+<areaspawn delay="1000" centerx="2394" centery="1847" centerz="7" radius="12">
+<monster name="Bug" minamount="25" maxamount="30"/>
+</areaspawn>
+
+<areaspawn delay="1000" centerx="2394" centery="1839" centerz="7" radius="10">
+<monster name="Bug" minamount="30" maxamount="30"/>
+</areaspawn>
+
+<areaspawn delay="1000" centerx="2382" centery="1848" centerz="7" radius="15">
+<monster name="Bug" minamount="25" maxamount="30"/>
+</areaspawn>
+
+<areaspawn delay="1000" centerx="2390" centery="1857" centerz="7" radius="5">
+<monster name="Bug" minamount="15" maxamount="25"/>
+</areaspawn>
+
+<areaspawn delay="6000" centerx="2394" centery="1847" centerz="7" radius="12">
+<monster name="Bug" minamount="25" maxamount="30"/>
+</areaspawn>
+
+<areaspawn delay="12000" centerx="2394" centery="1847" centerz="7" radius="12">
+<monster name="Bug" minamount="25" maxamount="30"/>
+</areaspawn>
+
+<areaspawn delay="24000" centerx="2394" centery="1847" centerz="7" radius="12">
+<monster name="Bug" minamount="25" maxamount="30"/>
+</areaspawn>
+
+<areaspawn delay="27000" centerx="2394" centery="1847" centerz="7" radius="12">
+<monster name="Bug" minamount="25" maxamount="30"/>
+</areaspawn>
+
+</raid>

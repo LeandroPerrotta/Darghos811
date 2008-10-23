@@ -1,0 +1,12 @@
+<raid>
+<announce delay="0" type="event" message="The mating season of the giant spiders is at hand. Leave Goblins Valley as fast as you can."/>
+<announce delay="180000" type="event" message="Giant spiders have gathered on the Goblins Valley near Quendor for their mating season. Beware!"/>
+
+<areaspawn delay="180000" centerx="2080" centery="1905" centerz="7" radius="5">
+<monster name="Giant Spider" minamount="20" maxamount="20"/>
+</areaspawn>
+
+
+<singlespawn delay="180000" name="Old Widow" x="2080" y="1905" z="7"/>
+
+</raid>

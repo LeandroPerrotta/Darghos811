@@ -1,0 +1,33 @@
+<raid>
+<announce delay="0" type="event" message="Rat Plague in Quendor!"/>
+
+<areaspawn delay="0" centerx="1991" centery="1888" centerz="7" radius="10">
+<monster name="Rat" minamount="15" maxamount="20"/>
+<monster name="Cave rat" minamount="15" maxamount="20"/>
+</areaspawn>
+
+<areaspawn delay="0" centerx="1965" centery="1868" centerz="7" radius="10">
+<monster name="Rat" minamount="15" maxamount="20"/>
+<monster name="Cave rat" minamount="15" maxamount="20"/>
+</areaspawn>
+
+<areaspawn delay="0" centerx="1980" centery="1800" centerz="7" radius="10">
+<monster name="Rat" minamount="15" maxamount="20"/>
+<monster name="Cave rat" minamount="15" maxamount="20"/>
+</areaspawn>
+
+<areaspawn delay="0" centerx="1980" centery="1800" centerz="7" radius="10">
+<monster name="Rat" minamount="25" maxamount="30"/>
+<monster name="Cave rat" minamount="20" maxamount="30"/>
+</areaspawn>
+
+<areaspawn delay="0" centerx="2030" centery="1845" centerz="7" radius="10">
+<monster name="Rat" minamount="15" maxamount="20"/>
+<monster name="Cave rat" minamount="15" maxamount="20"/>
+</areaspawn>
+
+<areaspawn delay="0" centerx="2070" centery="1860" centerz="7" radius="10">
+<monster name="Rat" minamount="25" maxamount="30"/>
+<monster name="Cave rat" minamount="20" maxamount="30"/>
+</areaspawn>
+</raid>

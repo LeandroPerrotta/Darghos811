@@ -1,0 +1,15 @@
+<npc name="Tesha" script="data/npc/scripts/ankrahmun_jewelry.lua" autowalk="25" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="132" body="77" feet="0" head="114" legs="116" corpse="2212"/>
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. You want to buy or sell jewelry?" />
+		<parameter key="message_needmoremoney" value="You do not have enough money." />
+		<parameter key="message_decline" value="Is |TOTALCOST| gold coins too much for you? Get out of here!" />
+
+		<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="job;name;offer" />
+		<parameter key="keyword_reply1" value="I buy and sell jewelrys." />
+		<parameter key="keyword_reply2" value="My name is Tesha. Why do you ask?" />
+		<parameter key="keyword_reply3" value="I offer white pearl, black pearl, small diamond, small amethyst, small ruby, small emerald, golden amulet, ruby necklace and wedding ring." />			
+	</parameters>
+</npc>

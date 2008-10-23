@@ -1,0 +1,58 @@
+<raid>
+<announce delay="0" type="event" message="Unknown ships are sighted south of Hydra Island."/>
+<announce delay="60000" type="event" message="The ships that approach Hydra Island from the south have raised the pirate flag! Hide or grab your weapons to fight."/>
+<announce delay="360000" type="event" message="Pirates are launching an attack on Liberty Bay! Hide or fight!"/>
+
+<areaspawn delay="360000" centerx="2500" centery="2446" centerz="7" radius="12">
+<monster name="Pirate Buccaneer" minamount="15" maxamount="25"/>
+</areaspawn>
+
+<areaspawn delay="360000" centerx="2495" centery="2446" centerz="7" radius="12">
+<monster name="Pirate Corsair" minamount="20" maxamount="10"/>
+</areaspawn>
+
+<areaspawn delay="360000" centerx="2490" centery="2446" centerz="7" radius="12">
+<monster name="Pirate Cutthroat" minamount="10" maxamount="25"/>
+</areaspawn>
+
+<areaspawn delay="360000" centerx="2485" centery="2446" centerz="7" radius="12">
+<monster name="Pirate Ghost" minamount="5" maxamount="20"/>
+</areaspawn>
+
+<areaspawn delay="360000" centerx="2480" centery="2446" centerz="7" radius="12">
+<monster name="Pirate Marauder" minamount="10" maxamount="20"/>
+</areaspawn>
+
+<areaspawn delay="360000" centerx="2475" centery="2446" centerz="7" radius="12">
+<monster name="Pirate Skeleton" minamount="20" maxamount="30"/>
+</areaspawn>
+
+<areaspawn delay="360000" centerx="2470" centery="2446" centerz="7" radius="10">
+<monster name="Pirate Buccaneer" minamount="10" maxamount="20"/>
+</areaspawn>
+
+<areaspawn delay="360000" centerx="2470" centery="2456" centerz="7" radius="10">
+<monster name="Pirate Corsair" minamount="5" maxamount="10"/>
+</areaspawn>
+
+<areaspawn delay="360000" centerx="2475" centery="2456" centerz="7" radius="15">
+<monster name="Pirate Cutthroat" minamount="10" maxamount="20"/>
+</areaspawn>
+
+<areaspawn delay="360000" centerx="2480" centery="2456" centerz="7" radius="5">
+<monster name="Pirate Ghost" minamount="5" maxamount="10"/>
+</areaspawn>
+
+<areaspawn delay="360000" centerx="2485" centery="2456" centerz="7" radius="20">
+<monster name="Pirate Skeleton" minamount="25" maxamount="35"/>
+</areaspawn>
+
+<areaspawn delay="360000" centerx="2490" centery="2456" centerz="7" radius="20">
+<monster name="Pirate Skeleton" minamount="25" maxamount="35"/>
+</areaspawn>
+
+<areaspawn delay="360000" centerx="2495" centery="2456" centerz="7" radius="20">
+<monster name="Pirate Skeleton" minamount="25" maxamount="35"/>
+</areaspawn>
+
+</raid>

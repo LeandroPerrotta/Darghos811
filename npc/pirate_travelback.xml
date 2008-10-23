@@ -1,6 +1,0 @@
-<npc name="Bogna" script="data/npc/scripts/pirate_travelback.lua" autowalk="25" floorchange="0" access="5" level="1" maglevel="1">
-	<health now="150" max="150"/>
-	<look type="151" body="132" feet="114" head="116" legs="75" corpse="2212"/>
-	<parameters>
-	</parameters>
-</npc>

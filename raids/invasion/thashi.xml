@@ -1,7 +1,0 @@
-<raid>
-<announce delay="10" type="event" message="The Loyal Elf Thashi Aharon is comming to the Elf Shire at Thorn!"/>
-<announce delay="300000" type="event" message="Thashi Aharon is on Elf Shire of Thorn."/>
-
-<singlespawn delay="300000" name="thashi aharon" x="2429" y="1774" z="7"/>
-
-</raid>

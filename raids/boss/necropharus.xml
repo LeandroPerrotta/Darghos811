@@ -1,6 +1,0 @@
-<raid>
-<announce delay="0" type="event" message="Something is not right in Undead Island."/>
-<announce delay="180000" type="event" message="A Necropharus has just raise at Undead Island!"/>
-
-<singlespawn delay="180000" name="Necropharus" x="2463" y="1784" z="10"/>
-</raid>

@@ -1,7 +1,0 @@
-<npc name="The Oracle" script="data/npc/scripts/rookguard_oracle.lua" autowalk="0" floorchange="0" access="5" level="1" maglevel="1">
-	<health now="150" max="150"/>
-	<look typeex="1448" corpse="2212"/>
-	<parameters>
-		
-	</parameters>
-</npc>

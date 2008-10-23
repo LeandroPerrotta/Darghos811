@@ -1,9 +1,0 @@
-<raid>
-<announce delay="0" type="event" message="A Undead Dragon was summoned by Necromancers at Undead Island!"/>
-
-<areaspawn delay="1000" centerx="2426" centery="1739" centerz="7" radius="7">
-<monster name="Necromancer" minamount="5" maxamount="10"/>
-</areaspawn>
-
-<singlespawn delay="1000" name="Undead Dragon" x="2430" y="1740" z="7"/>
-</raid>

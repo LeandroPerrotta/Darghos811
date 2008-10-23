@@ -1,4 +1,0 @@
-  <?xml version="1.0" ?> 
-- <npc name="Bohz" script="data/npc/scripts/global_bohz.lua" access="3">
-  <look type="128" head="50" body="101" legs="23" feet="29" addons="3" /> 
-  </npc>

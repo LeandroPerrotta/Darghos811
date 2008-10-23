@@ -1,5 +1,0 @@
-<raid>
-<announce delay="0" type="event" message="A Demodras has come to Dragon Lair in Aracura!"/>
-
-<singlespawn delay="1000" name="Demodras" x="2020" y="2182" z="8"/>
-</raid>

@@ -1,4 +1,0 @@
-<npc name="Teodor" script="data/npc/scripts/aracura_soft.lua" autowalk="25" floorchange="0" access="5" level="1" maglevel="1">
-	<health now="150" max="150"/>
-	<look type="134" body="114" feet="0" head="116" legs="94" corpse="2212"/>
-</npc>

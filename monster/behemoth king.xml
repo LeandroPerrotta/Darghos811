@@ -83,7 +83,9 @@
 
     <defenses armor="500" defense="100">
 
-      <defense name="haste" interval="5000" chance="100"/>
+    <defense name="healing" interval="1000" chance="25" min="513" max="2087">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
 
     </defenses>
 

@@ -29,7 +29,11 @@
     <attribute key="shootEffect" value="whirlwindclub"/>
    </attack>
   </attacks>
-  <defenses armor="900" defense="300"/>
+  <defenses armor="500" defense="300">
+    <defense name="healing" interval="1000" chance="25" min="513" max="1587">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
   <immunities>
     <immunity physical="0"/>
     <immunity energy="0"/>

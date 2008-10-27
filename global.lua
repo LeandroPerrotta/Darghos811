@@ -654,3 +654,155 @@ function isKnight(cid)
 
 	return (isInArray({4,8}, getPlayerVocation(cid)) == TRUE)
 end
+
+-- Dynamic quest maker functions
+		-- TODO: add contidition -> getContainerCap(bp)-getContainerSize(bp) 
+		Quest = {}
+
+		function Quest:doQuest(uid, itemid, count, exp, storage, p)
+			local queststatus = getPlayerStorageValue(uid, storage)
+			local playerweigh = getPlayerFreeCap(uid)	
+			
+			if (type(itemid) == 'table') then
+				if (queststatus == -1) then
+					local containerweigh = self:getContainerWeight(uid, itemid, count, 0)
+					if (containerweigh < playerweigh) then
+						self:doPlayerGivePrize(uid, itemid, count, 0)
+						if (exp > 0) then
+							doPlayerAddExp(uid,exp)
+						end
+						setPlayerStorageValue(uid, storage, 1)
+						return TRUE
+					else
+						return FALSE, "It is too heavy."
+					end
+				else
+					return FALSE, "It is empty." 
+				end
+			else	
+				if (queststatus == -1) then
+					if (playerweigh >= itemweigh) then
+						doPlayerAddItem(uid, itemid, count)
+						if (exp > 0) then
+							doPlayerAddExp(uid,exp)
+						end
+						setPlayerStorageValue(uid, storage, 1)
+						return TRUE
+					else
+						return FALSE, "It is too heavy."
+					end
+				else
+					return FALSE, "It is empty." 
+				end
+			end
+			return FALSE
+		end
+
+		function Quest:doPlayerGivePrize(uid, itens, counts, cnt)
+			local container = 0
+			local tmp1, tmp2
+			
+			if (cnt == 0) then
+				container = doPlayerAddItem(uid,itens.container,1)
+			else
+				if (itens.container ~= nil) then
+					container = doAddContainerItem(cnt,itens.container,1)
+				end
+			end
+			
+			if (type(counts) ~= 'table') then
+				counts = {}
+			end
+			
+			for tmp1 = 1, #itens do
+				if (type(itens[tmp1]) == 'number') then
+					if ((counts[tmp1] == nil) or (counts[tmp1] < 0)) then
+						counts[tmp1] = 1
+					end
+					doAddContainerItem(container, itens[tmp1], counts[tmp1])
+				else
+					if ((type(counts[tmp1]) == 'number') or (counts[tmp1] == nil)) then
+						counts[tmp1] = {}
+					end
+					self:doPlayerGivePrize(uid, itens[tmp1], counts[tmp1], container)
+				end
+			end
+		end
+
+		function Quest:getContainerWeight(uid,itens,counts,cnt)
+			local tmp1, tmp2
+			
+			if (cnt == nil) then
+				cnt = 0
+			end
+			
+			cnt = cnt + getItemWeight(itens.container, 1)
+			
+			local tmp1,tmp2
+			if (type(counts) ~= 'table') then
+				local counts = {}
+			end
+			
+			for tmp1 = 1, #itens do
+				if (type(itens[tmp1]) == 'number') then
+					if (counts[tmp1] == nil or counts[tmp1] < 0) then
+						counts[tmp1] = 1
+					end
+					cnt = cnt + getItemWeight(itens[tmp1], counts[tmp1])
+				else
+					if ((type(counts[tmp1]) == 'number') or (counts[tmp1] == nil)) then
+						counts[tmp1] = {}
+					end
+					cnt = cnt + self:getContainerWeight(uid, itens[tmp1], counts[tmp1], cnt)
+				end
+			end
+			return cnt
+		end
+		
+				function doEventCallBack(param)
+			if (type(param.func) == 'function') then
+				param.func(unpack(param))
+			end
+		end
+
+		function addArrayEvent(functions, delays, params)
+			if ((type(functions) ~= 'table') or (type(delays) ~= 'table') or (type(params) ~= 'table')) then
+				debug('All parameters need to be arrays.')
+				return FALSE
+			end
+			local count = math.max(#functions, math.max(#delays, #params))
+			local tmp, last_function, last_delay, last_param, eventid, delay_tmp
+			local EventIds = {}
+			for tmp = 1, count do
+				eventid = addEvent(functions[tmp] or last_function, delays[tmp] or last_delay, params[tmp] or last_param)
+				table.insert(EventIds, eventid)
+				last_function = functions[tmp] or last_function
+				if (delays[tmp] ~= nil ) then
+					last_delay = delays[tmp]
+					delay_tmp = delays[tmp]
+				else
+					last_delay = last_delay + delay_tmp
+				end
+				last_param = params[tmp] or last_param
+			end
+			return EventIds
+		end
+
+		function doCombatEvent(param)
+			if (isCreature(param.caster) == TRUE) then
+				if (param.var ~= nil) then
+					doCombat(param.caster, param.combat, param.var)
+				elseif (param.target ~= nil) then
+					if (isCreature(param.target) == TRUE) then
+						doCombat(param.caster, param.combat, numberToVariant(param.target))
+					end
+				elseif (param.pos ~= nil) then
+					doCombat(param.caster, param.combat, positionToVariant(param.pos))
+				elseif (param.string ~= nil) then
+					doCombat(param.caster, param.combat, stringToVariant(param.string))
+				else
+					debug('Parameter missing.')
+				end
+			end
+		end
+		

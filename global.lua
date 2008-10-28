@@ -1,5 +1,5 @@
-dofile('consts.lua')
-dofile('functions.lua')
+dofile('data/consts.lua')
+dofile('data/functions.lua')
 
 -- Storage consts
 -- ...

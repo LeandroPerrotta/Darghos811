@@ -11,7 +11,6 @@
 	<talkaction words="/exp" script="exp.lua"/>
 	<talkaction words="!bara" script="buyprem.lua"/>
 	<talkaction words="/ctile" script="ctile.lua"/>
-	<talkaction words="/popup" script="lua.lua"/>
 	<talkaction words="!stage" script="info_stages.lua"/>
 	<talkaction words="!stages" script="info_stages.lua"/>
 	<talkaction words="Aosoth" script="teleport_dark.lua"/>

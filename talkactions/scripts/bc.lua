@@ -39,3 +39,4 @@ function onSay(cid, words, param)
         end
     end
 end
+

@@ -1,0 +1,24 @@
+<raid>
+<announce delay="0" type="event" message="The King of Dwarfs, holder of Thunder Hammer is comming to the surface!"/>
+<announce delay="20000" type="event" message="Durin and his loyal soldiers are ready to fight!"/>
+<announce delay="50000" type="event" message="The dwarfs are rising again!"/>
+
+<areaspawn delay="50000" centerx="2093" centery="1971" centerz="7" radius="20">
+<monster name="dwarf" minamount="30" maxamount="50"/>
+</areaspawn>
+
+<areaspawn delay="50000" centerx="2093" centery="1971" centerz="7" radius="20">
+<monster name="dwarf soldier" minamount="20" maxamount="20"/>
+</areaspawn>
+
+<areaspawn delay="50000" centerx="2093" centery="1971" centerz="7" radius="20">
+<monster name="dwarf guard" minamount="25" maxamount="50"/>
+</areaspawn>
+
+<areaspawn delay="50000" centerx="2093" centery="1967" centerz="7" radius="16">
+<monster name="dwarf geomancer" minamount="25" maxamount="50"/>
+</areaspawn>
+
+<singlespawn delay="50000" name="Durin" x="2062" y="1967" z="7"/>
+
+</raid>

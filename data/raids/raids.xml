@@ -1,0 +1,58 @@
+<raids>
+	-- CITY INVASION Raids
+		-- Quendor
+		<raid name="quendor_rats" file="invasion/quendor_rats.xml" interval2="60" margin="1000"/>			
+		<raid name="quendor_orcs" file="invasion/quendor_orcs.xml" interval2="60" margin="3500"/>	
+		<raid name="quendor_flashzarrot" file="invasion/quendor_flashzarrot.xml" interval2="60" margin="10000"/>
+		<raid name="goblins_quendor" file="invasion/goblins_quendor.xml" interval2="60" margin="10000"/>
+		<raid name="quendor_wasp" file="invasion/quendor_wasp.xml" interval2="60" margin="1200"/>
+		<raid name="amazon_quendor" file="invasion/amazon_quendor.xml" interval2="60" margin="3500"/>
+		<raid name="minotaur_quendor" file="invasion/minotaur_quendor.xml" interval2="60" margin="3500"/>
+		<raid name="trolls_quendor" file="invasion/trolls_quendor.xml" interval2="60" margin="3500"/>
+		<raid name="skeleton_quendor" file="invasion/skeleton_quendor.xml" interval2="60" margin="3500"/>
+		<raid name="ghoul_quendor" file="invasion/ghoul_quendor.xml" interval2="60" margin="3500"/>
+		<raid name="blackmagic_quendor" file="invasion/blackmagic_quendor.xml" interval2="60" margin="3500"/>
+		<raid name="warwolf_quendor" file="invasion/warwolf_quendor.xml" interval2="60" margin="3500"/>
+		<raid name="sand_quendor" file="invasion/sand_quendor.xml" interval2="60" margin="3500"/>
+		<raid name="durin" file="invasion/durin.xml" interval2="60" margin="3500"/>
+		
+		-- Thorn
+		<raid name="thorn_elven" file="invasion/thorn_elven.xml" interval2="60" margin="5000"/>
+		<raid name="elven_thorn" file="invasion/elven_thorn.xml" interval2="60" margin="5000"/>
+		<raid name="bug_thorn" file="invasion/bug_thorn.xml" interval2="60" margin="3500"/>
+		<raid name="trolls_thorn" file="invasion/trolls_thorn.xml" interval2="60" margin="3500"/>
+		<raid name="wyvern_thorn" file="invasion/wyvern_thorn.xml" interval2="60" margin="3500"/>
+		<raid name="cyc_thorn" file="invasion/cyc_thorn.xml" interval2="60" margin="3500"/>
+		<raid name="thashi" file="invasion/thashi.xml" interval2="60" margin="3500"/>
+		<raid name="ancienti" file="invasion/ent_thorn.xml" interval2="60" margin="3500"/>
+		
+		-- Aracura
+		<raid name="dragon_aracura" file="invasion/dragon_aracura.xml" interval2="60" margin="10000"/>
+		<raid name="undead_aracura" file="invasion/undead_aracura.xml" interval2="60" margin="10000"/>
+		<raid name="giant_aracura" file="invasion/giant_aracura.xml" interval2="60" margin="10000"/>
+		<raid name="demon_aracura" file="invasion/demon_aracura.xml" interval2="60" margin="10000"/>
+		
+		-- Others Areas
+		<raid name="undead_island" file="invasion/undead_island.xml" interval2="60" margin="4500"/>
+		<raid name="pirates_island" file="invasion/pirates_island.xml" interval2="60" margin="4500"/>
+		<raid name="minotaur_rook" file="invasion/minotaur_rook.xml" interval2="60" margin="25000"/>
+		<raid name="tutankamun" file="special/tutankamun.xml" interval2="60" margin="25000"/>
+		<raid name="scarab" file="invasion/scarab_salazart.xml" interval2="60" margin="25000"/>
+		<raid name="tiquandas_revenge" file="invasion/tiquandas_revenge.xml" interval2="60" margin="25000"/>
+		
+	-- SPECIAL Raids
+		<raid name="quendor_orshabaal" file="special/quendor_orshabaal.xml" interval2="60" margin="25000"/>
+		<raid name="ferumbras" file="special/ferumbras.xml" interval2="60" margin="25000"/>
+		<raid name="ferumbras_war" file="special/ferumbras_war.xml" interval2="60" margin="25000"/>
+		<raid name="siegfried" file="special/siegfried.xml" interval2="60" margin="25000"/>
+		<raid name="high" file="special/high.xml" interval2="60" margin="25000"/>
+		<raid name="morgaroth_goroma" file="special/morgaroth_goroma.xml" interval2="60" margin="35000"/>
+		<raid name="ghazbaran_mines" file="special/ghazbaran_mines.xml" interval2="60" margin="35000"/>
+		<raid name="orc_global" file="invasion/orc_global.xml" interval2="60" margin="35000"/>
+		
+	-- BOSSES Raids
+		<raid name="aracura_demodras" file="boss/aracura_demodras.xml" interval2="60" margin="10000"/>
+		<raid name="oldWidow_poh" file="boss/oldWidow_poh.xml" interval2="60" margin="8000"/>
+		<raid name="necropharus" file="boss/necropharus.xml" interval2="60" margin="8000"/>
+		<raid name="undead_dragon" file="boss/undead_dragon.xml" interval2="60" margin="4500"/>
+</raids>

@@ -1,0 +1,8 @@
+<npc name="Hazan" script="data/npc/scripts/missao_warlock.lua" autowalk="25" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="130" body="97" feet="0" head="93" legs="0" corpse="2212"/>
+	<parameters>
+
+	</parameters>
+
+</npc>

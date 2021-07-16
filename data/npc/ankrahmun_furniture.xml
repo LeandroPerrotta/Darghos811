@@ -1,0 +1,14 @@
+<npc name="Feizuhl" script="data/npc/scripts/global_furniture.lua" autowalk="25" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="133" body="76" feet="114" head="116" legs="95" corpse="2212"/>
+	<parameters>
+		<parameter key="module_shop" value="1" />
+		<parameter key="bird cage,3918,50;cuckoo clock,1877,25;globe,3927,50;goldfish bowl,5928,50;pendulum clock,1728,75;rocking horse,2116,30;telescope,2581,70;table lamp,3937,35;purple tapestry,1857,25;green tapestry,1860,25;yellow tapestry,1863,25;orange tapestry,1866,25;red tapestry,1869,25;blue tapestry,1872,25;white tapestry,1880,25;water-pipe,2093,40;flower bowl,2102,6;god flower,2100,5;honey flower,2103,5;indoor plant,3929,10;potted flower,3928,10;piano,3926,200;harp,3917,50;large amphora,2034,50,1;amphora,2023,90,1;armour rack,6111,90;barrel,3923,12;bookcase,6368,70;box,3915,10;chest,1740,10;crate,1739,10;drawer,3921,18;dresser,3932,40;locker,3934,60;trough,3935,10;large trunk,3938,10;vase,2008,3,1;weapon rack,6109,90;green cushioned chair,3904,40;red cushioned chair,3903,40;rocking chair,1674,25;sofa chair,3902,55;wooden chair,3901,15;heart pillow,1685,30;blue pillow,1686,25;red pillow,1687,25;green pillow,1688,25;yellow pillow,1689,25;blue round pillow,1690,25;red round pillow,1691,25;purple round pillow,1692,25;turqoise round pillow,1693,25;purple small pillow,1678,25;green small pillow,1679,25;red small pillow,1680,25;blue small pillow,1681,25;orange small pillow,1682,25;turqoise small pillow,1683,25;white small pillow,1684,25;big table,3909,30;round table,3911,25;small table,3912,20;square table,3910,25" />
+
+		<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="job;name;offer" />
+		<parameter key="keyword_reply1" value="I am the furniture shopkeeper on Ankrahmun." />
+		<parameter key="keyword_reply2" value="My name is Feizuhl. Why do you ask?" />
+		<parameter key="keyword_reply3" value="Feizuhl sells furniture, musical instruments, flowers, paintings and more! Everything you might need for your house!" />	
+		</parameters>
+</npc>

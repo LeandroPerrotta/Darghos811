@@ -1,0 +1,11 @@
+<raid>
+	<announce delay="0" type="event" message="Quendor call all warriors back to city. Something is comming!"/>
+	<announce delay="120000" type="event" message="Please, quendor citizens, we need help at Quendor city NOW!"/>
+	<announce delay="240000" type="event" message="A behemoth king has come to darghos lands."/>
+
+	<areaspawn delay="240000" centerx="1947" centery="1705" centerz="7" radius="10">
+	<monster name="Cyclops" minamount="1" maxamount="4"/>
+	</areaspawn>
+
+	<singlespawn delay="240000" name="Behemoth King" x="2021" y="1870" z="7"/>
+</raid>

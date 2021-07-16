@@ -1,0 +1,105 @@
+BlackOnix Revival
+
+[]LEGENDA
+	[V.I.P] = Contribuidores
+	[Dev] = Em desenvolvimento
+	[OK] = Pronto
+	(Fix) Otimizações de códigos, correção de bugs
+	(Plus) Sistemas novos independentes
+	(Cfg) Sistemas que requerem mudanças em outros sistemas
+
+	Site
+		Inovador com visual moderno e uso de AJAX
+		
+		- Login (com opção de lembrar senha) 
+		- Registro (com envio de senha via email e condição de senha ter de ser diferente da conta)
+		- Highscores (com filtragem de campos-mestre) 
+		- Notícias (com RSS, busca de notícias, arquivo e filtragem de campos-mestre [categoria/data/nome]
+		- Guildas (listagem, filtragem de campos-mestre, edição [descrição, ranks, expulsão, convite, emblema])
+		- Busca (com auto-suggest)
+		- Casas (listagem, filtragem de campos-mestre, leilão)
+		- Listagem de jogadores online
+		- Status do servidor
+		- Recuperação de senha via email, RK e resposta de pergunta
+		- Admin Panel
+		- Fórum
+		
+	Servidor
+		Logística
+			- Todos os valores de scripts serão configurados em um único arquivo
+			- Updates
+				(Fix)  Feitos na hora
+				(Plus) A cada 7 dias, aos domingos
+				(Cfg)  A cada mês
+			
+		Scripts
+			Magias
+				BlackOnix-like
+					1) Magia que acelera a generação de HP e MP dos jogadores presentes em uma party.
+					2) Magia que segue o alvo [OK]
+					3) Magia que vai até um alvo mas caso esteja fora do range, volta
+						[http://otland.net/f82/gesior-noob-spells-collection-8019/index.html]
+					4) Magia que converte HP e MP em Life Fluid e Mana Fluid respectivamente
+						[http://otland.net/f82/refill-your-empty-vials-6866/]
+					5) Magia que usa "target" ao qual o alvo vai para o local do conjurador e vice-versa
+					
+					6) "Bushido" - BlackOnix
+					7) [Animalia] Magia que transforma em urso e caso esteja transformado em urso pode transformar 
+					   em um urso de estágio 2 com mais HP e ataque e assim vai até estágio 5
+					8) [Animalia] Mesmo esquema da de cima só que transforma em urso e deixa mais veloz. No último 
+					   nível, muda de wolf para war wolf.
+						[http://otland.net/f82/nothing-special-just-bored-3828/]
+						(Fazer espécie de lib para tais magias)
+					
+			NPC
+				Estoque de itens
+				Opção de retirar dinheiro do banco (com taxa de juros)
+				Leilão de itens de jogadores
+				Guarda que ataca PK (Cityguard)
+				Venda de itens de jogadores com envio do dinheiro para o banco
+					
+			"Usables"
+				Pergaminho de teleporte (só poderá usar caso não tenha battle) [V.I.P]
+				Armas slotadas que possuem habilidades e que que são ativadas ao se dar "use" [V.I.P][Dev]
+					[Armas slotadas serão necessárias "recipes" para serem feitas, e apartir daí terão um actionid]
+					
+			Weapon
+				Arma que ataca em área 
+					[http://otland.net/f82/weapon-multitarget-wand-star-shoter-13967/]
+				Arma que tem X% de queimar/envenenar/energizar/"berserkar" -> drunk com dano crítico / ataque duplo
+					Fire sword -> burn
+					Serpent Sword -> poison
+					Spike sword -> energy
+					Ice Rapier -> "berserk"
+					Bright sword -> ataque duplo
+				
+			Vantagens extras
+				Consumo menor de mana em magias
+				Aumento no dano de magias
+				Aumento no dano de ataques corporais
+				
+				
+			Sistemas
+				NPC System
+				The Commander
+				Wanted System
+				Clan Wars
+					Kill seguida sem morrer: 3) killing spree . 4) dominating . 5) wicked sick . 6) godlike
+					Frags podem ser trocadas por reputação
+					Cada frag efetuada, ganha-se dinheiro
+			
+		Source
+			1) Party functions (ou então criar Condition)
+			2) "Jutsu"
+			3) creatureAi -> monster + npc (ou Luascripts para monstros)
+			4) [Função] setServerRateParam(type) -> loot, exp, skill
+			5) Skulls em monstros (creatureAi)
+			6) "Firaga"
+			7) "Aura" spells
+			8) Modificação para o push
+			9) Integração IRC
+			10) Invisibilidade para player
+			
+		
+		
+		

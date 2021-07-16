@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<monster name="Demoniac Skeleton" description="a demonic skeleton" experience="2600" speed="320" race="undead">
+  <health now="4000" max="4000"/>
+  <strategy attack="100" defense="0"/>
+  <targetchange speed="100" chance="20"/>
+  <look type="37" head="20" body="30" legs="40" feet="50" addons="0" corpse="2809"/>
+  <flags>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag hostile="1"/>
+    <flag attackable="1"/>
+    <flag illusionable="1"/>
+    <flag pushable="0"/>
+    <flag staticattack="50"/>
+    <flag targetdistance="1"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" chance="100" min="-135" max="-430" range="1"/>
+    <attack name="lifedrain" interval="8000" chance="500" min="-210" max="-350" range="4"/>
+  </attacks>
+  <defenses defense="44" armor="42"/>
+  <immunities>
+    <immunity name="fire"/>
+    <immunity name="earth"/>
+    <immunity name="drunk"/>
+    <immunity name="invisible"/>
+  </immunities>
+  <voices speed="5000" chance="10000">
+    <voice sentence="I will take you to hell!" yell="1"/>
+  </voices>
+  <summons maxSummons="1">
+    <summon name="Demon Skeleton" speed="1000" chance="10"/>
+  </summons>
+  <loot>
+    <item id="2148" countmax="40" chance="100000"/>
+    <item id="2399" countmax="1" chance="10000"/>
+    <item id="2515" countmax="1" chance="1666"/>
+    <item id="5888" countmax="1" chance="600"/>
+    <item id="2050" countmax="1" chance="33333"/>
+    <item id="1987" countmax="1" chance="100000">
+      <inside>
+        <item id="2417" countmax="1" chance="5000"/>
+        <item id="2482" countmax="1" chance="2857"/>
+        <item id="2194" countmax="1" chance="1666"/>
+        <item id="2398" countmax="1" chance="10000"/>
+      </inside>
+    </item>
+    <item id="2520" countmax="1" chance="2000"/>
+    <item id="7382" countmax="1" chance="1500"/>
+  </loot>
+</monster>

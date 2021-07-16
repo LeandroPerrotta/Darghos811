@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Siegfried" nameDescription="an Elite Knight" race="blood" experience="30000" speed="400" manacost="0">
+  <health now="150000" max="150000"/>
+  <look type="131" head="102" body="102" legs="102" feet="102" corpse="3058"/>
+  <targetchange interval="2000" chance="3"/>
+  <strategy attack="50" defense="50"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+      <attack name="melee" interval="2000" min="-350" max="-920"/>
+    <attack name="physical" interval="1000" chance="20" range="7" min="-745" max="-800">
+      <attribute key="shootEffect" value="whirlwindsword"/>
+    </attack>
+	<attack name="melee" interval="1000" chance="15" range="7" radius="3" target="0" min="-715" max="-955">
+	  <attribute key="areaEffect" value="blackspark"/>
+	</attack>
+	<attack name="speed" interval="2000" chance="17" range="7" target="1" speedchange="-1000" duration="8000">
+<attribute key="shootEffect" value="whirlwindaxe"/>
+</attack>
+  </attacks>
+  <defenses armor="105" defense="70"/>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="1"/>
+    <immunity fire="1"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="1000" chance="10">
+    <voice sentence="FOR ODIN!" yell="1"/>
+    <voice sentence="YOU CAN NOT RUN!" yell="1"/>
+	<voice sentence="COME AND DIE!" yell="1"/>
+	<voice sentence="HAHAHA!" yell="1"/>
+    <voice sentence="PRAY!" yell="1"/>
+  </voices>
+  <loot capacity="900">
+    <item id="2392" countmax="1" chance="1000"/>
+    <item id="2195" countmax="1" chance="1000"/>
+    <item id="2470" countmax="1" chance="1000"/>
+	<item id="2393" countmax="1" chance="1000"/>
+	<item id="2214" countmax="1" chance="1000"/>
+	<item id="2391" countmax="1" chance="1000"/>
+	<item id="7382" countmax="1" chance="1000"/>
+    <item id="2472" countmax="1" chance="1000"/>
+    <item id="2520" countmax="1" chance="1000"/> 
+	<item id="2514" countmax="1" chance="1000"/>
+	<item id="2498" countmax="1" chance="1000"/>
+	<item id="2432" countmax="1" chance="1000"/>
+	<item id="2179" countmax="1" chance="1000"/>
+	<item id="2472" countmax="1" chance="1000"/>
+	<item id="1987" countmax="1" chance="100000">
+		<inside>
+			<item id="2396" countmax="1" chance="100000"/>
+			<item id="2396" countmax="1" chance="100000"/>
+			<item id="2396" countmax="1" chance="100000"/>
+			<item id="2396" countmax="1" chance="100000"/>
+			<item id="2396" countmax="1" chance="100000"/>
+			<item id="2396" countmax="1" chance="100000"/>
+			<item id="2396" countmax="1" chance="100000"/>
+			<item id="2396" countmax="1" chance="100000"/>
+		</inside>
+	</item>		
+  </loot>
+</monster>

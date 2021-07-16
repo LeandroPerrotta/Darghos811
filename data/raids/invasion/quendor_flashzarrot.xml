@@ -1,0 +1,19 @@
+<raid>
+<announce delay="0" type="event" message="Great activity of Orc go to Quendor! Beware!"/>
+<announce delay="180000" type="event" message="Quendor is under attack with General Flash Zarrot in Command!"/>
+
+<areaspawn delay="180000" centerx="2070" centery="1859" centerz="7" radius="7">
+<monster name="Orc Leader" minamount="8" maxamount="15"/>
+<monster name="Orc Berserker" minamount="16" maxamount="20"/>
+<monster name="Orc Warlord" minamount="6" maxamount="12"/>
+<monster name="Flash Zarrot" minamount="0" maxamount="1"/>
+</areaspawn>
+
+<areaspawn delay="180000" centerx="1986" centery="1806" centerz="7" radius="7">
+<monster name="Orc Leader" minamount="8" maxamount="15"/>
+<monster name="Orc Berserker" minamount="16" maxamount="20"/>
+<monster name="Orc Warlord" minamount="6" maxamount="12"/>
+<monster name="Flash Zarrot" minamount="1" maxamount="1"/>
+</areaspawn>
+
+</raid>

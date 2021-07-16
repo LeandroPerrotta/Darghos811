@@ -1,0 +1,25 @@
+<raid>
+<announce delay="0" type="event" message="Many Dragons are comming to the city of Aracura!"/>
+<announce delay="45000" type="event" message="Dragon are atacking the city!"/>
+
+<areaspawn delay="50000" centerx="2012" centery="2142" centerz="7" radius="10">
+<monster name="Dragon" minamount="15" maxamount="25"/>
+</areaspawn>
+
+<areaspawn delay="50000" centerx="1987" centery="2143" centerz="7" radius="10">
+<monster name="Dragon" minamount="10" maxamount="20"/>
+</areaspawn>
+
+<areaspawn delay="50000" centerx="2006" centery="2141" centerz="7" radius="15">
+<monster name="Dragon Lord" minamount="15" maxamount="20"/>
+</areaspawn>
+
+<areaspawn delay="50000" centerx="2008" centery="2141" centerz="7" radius="5">
+<monster name="Demodras" minamount="3" maxamount="5"/>
+</areaspawn>
+
+<areaspawn delay="50000" centerx="2064" centery="2143" centerz="7" radius="45">
+<monster name="Dragon" miamount="60" maxamount="80"/>
+</areaspawn>
+
+</raid>

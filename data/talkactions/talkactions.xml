@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<talkactions>
+	<talkaction words="!Tumb of Light Stone" script="leavehouse.lua" />	
+	<talkaction words="!leavehouse" script="leavehouse.lua" />
+	<talkaction words="Amila Kratus!" script="demona_block.lua" />
+	<talkaction words="/save" script="save.lua" />	
+	<talkaction words="/tp" script="tp.lua" />	
+	<talkaction words="/msg" script="msg.lua" />	
+	<talkaction words="!mortes" script="deathlist.lua"/>
+	<talkaction words="!bc" script="bc.lua"/>
+	<talkaction words="/exp" script="exp.lua"/>
+	<talkaction words="!bara" script="buyprem.lua"/>
+	<talkaction words="/ctile" script="ctile.lua"/>
+	<talkaction words="!stage" script="info_stages.lua"/>
+	<talkaction words="!stages" script="info_stages.lua"/>
+	<talkaction words="Aosoth" script="teleport_dark.lua"/>
+	<talkaction words="ancient_ent" script="ent.lua"/>
+</talkactions>

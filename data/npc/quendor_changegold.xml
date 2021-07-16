@@ -1,0 +1,4 @@
+<npc name="Cedric" script="data/npc/scripts/global_changegold.lua" autowalk="25" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="130" body="0" feet="114" head="98" legs="76" corpse="2212"/>
+</npc>

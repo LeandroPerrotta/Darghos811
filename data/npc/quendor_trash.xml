@@ -1,0 +1,28 @@
+<npc name="Garbage Man" script="data/npc/scripts/simples.lua" autowalk="25" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="139" body="95" feet="114" head="116" legs="0" corpse="2212"/>
+	<parameters>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_sellable" value="
+		hand axe,2382,3;
+		hand axe,2650,3;
+		hand axe,1988,3;
+		hand axe,7635,3;
+		hand axe,7634,3;
+		hand axe,7636,3;
+		hand axe,2120,3;
+		hand axe,2646,3;
+		hand axe,2468,3;
+		hand axe,2480,3;
+		hand axe,2464,3;
+		hand axe,2530,3;
+		hand axe,2666,3;
+		hand axe,2050,3;		
+			
+		hand axe,1987,2;	
+		
+		"/>
+		<parameter key="message_greet" value="Ola |PLAYERNAME|. Eu sou um NPC que compra equipamentos e lixos que sao jogados ao chao de Quendor!"/>
+	
+	</parameters>
+</npc>

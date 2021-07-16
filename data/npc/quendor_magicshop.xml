@@ -1,0 +1,20 @@
+<npc name="Borki" script="data/npc/scripts/global_magicshop.lua" autowalk="25" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="130" body="94" feet="0" head="98" legs="0" corpse="2212"/>
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. Do you want to buy any spell runes?" />
+		<parameter key="message_needmoremoney" value="You do not have enough money." />
+		<parameter key="message_decline" value="Is |TOTALCOST| gold coins too much for you? Get out of here!" />
+
+		<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="job;name;offer;support;attack;cure;magic items" />
+		<parameter key="keyword_reply1" value="I am the seller of runes and magic items." />
+		<parameter key="keyword_reply2" value="My name is Borki. Why do you ask?" />
+		<parameter key="keyword_reply3" value="I sell wands (vortex, dragonbreath, plague, cosmic energy and inferno), rods (snakebite, moonlight, volcanic, quagmire and tempest), runes (support, attack and cure) and magic items." />	
+		<parameter key="keyword_reply4" value="I sell magic wall and paralize" />
+		<parameter key="keyword_reply5" value="I sell heavy magic missile, great fireball, explosion and sudden death." />
+		<parameter key="keyword_reply6" value="I sell ultimate healing." />	
+		<parameter key="keyword_reply7" value="I sell lightwand, mana fluid, life fluid and blank runes." />	
+	</parameters>
+
+</npc>

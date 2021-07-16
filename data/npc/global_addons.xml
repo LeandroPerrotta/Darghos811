@@ -1,0 +1,10 @@
+<npc name="Timoteo" script="data/npc/scripts/addonsbased.lua" autowalk="25" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="278" addons="3" body="94" feet="0" head="98" legs="0" corpse="2212"/>
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I make addons! Im the Timoteo" />
+		<parameter key="message_needmoremoney" value="You do not have enough money." />
+		<parameter key="message_decline" value="Is |TOTALCOST| gold coins too much for you? Get out of here!" />
+	</parameters>
+
+</npc>

@@ -1,0 +1,28 @@
+The Artificial Life: Npc System Library
+Version 0.1
+Developer: Nostradamus
+
+	Roadmap
+	
+		- Debugger Strackback (configurable tables and advanced error reporting)
+		- onTalk event with dynamic uses of talkstates and so on
+			sub-talkstates will be sub-arrays of the main talkstate refered to it
+			messages will be handled into arrays with the input and output of the NPC (message and answer subarrays)
+		- Function to list buying/selling items, teleport places and spells with filders 
+			(type of the item -> new element in array (optional): type)
+		- Easy module integration
+		- Optmize Buy/Sell functions to accept containers with items
+		- End the usage using a garbage collector
+		- Messages with delay if the lenght is too big
+		- Separates modules and handler to waste less memory
+		- ratePrice should be later a global const for anything who uses money transaction
+		- Possibility to use XML file or Lua
+		- Extras
+			Item Stock
+			Promote Module
+			Premium Module
+			Blessing Module
+			Addon Module
+			Quest Module
+			
+			

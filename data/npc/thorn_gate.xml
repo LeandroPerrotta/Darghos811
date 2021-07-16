@@ -1,0 +1,13 @@
+<npc name="Gorus" script="data/npc/scripts/global_message.lua" autowalk="25" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="131" body="0" feet="114" head="116" legs="95" corpse="2212"/>
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. How i can help you?" />
+		
+		<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="job;name;protected cell" />
+		<parameter key="keyword_reply1" value="I am a guard." />
+		<parameter key="keyword_reply2" value="My name is Gorus. Why do you ask?" />
+		<parameter key="keyword_reply3" value="If you are in this cell on the prison of Mintarus, there is no way to escape. To access this cell you need to remove the stone from the way, if you want to do this, search for the secret chamber inside the prison." />			
+	</parameters>
+</npc>
